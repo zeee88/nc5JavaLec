@@ -1,0 +1,28 @@
+package Homework_0328;
+
+import java.util.List;
+
+public class GenericCla<T> {
+
+	private T t;
+
+	public T getT() {
+		return t;
+	}
+
+	public void setT(T t) {
+		this.t = t;
+	}
+	public static <T> String add(T t1, T t2) {
+		
+		StringBuffer stb = new StringBuffer();
+
+		return stb.append(t1).append(t2);
+	}
+	
+	public static Integer add(List<?> list) {
+		
+		
+	}
+	
+}

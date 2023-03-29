@@ -1,0 +1,21 @@
+package chap17_generic;
+
+import java.util.List;
+
+public class _04_genetic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		//Number상속 받는 T
+		//리턴타입 List<T> getEven(List<T> list)
+		
+		
+	}
+				//Number을 상속받는 T	//리턴 타입 //
+	public static <T extends Number> List<T> getEven(List<T> list){
+		
+	}
+
+}

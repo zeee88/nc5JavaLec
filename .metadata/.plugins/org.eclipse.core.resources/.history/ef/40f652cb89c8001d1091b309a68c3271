@@ -1,0 +1,14 @@
+package chap15_usefulClass;
+
+public class _05_ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "가비트나네이버다라마바클라우드";
+		//비트, 네이버, 클라우드 찾아서 제거
+		System.out.println(str.substring(2,4s));
+		
+	}
+
+}

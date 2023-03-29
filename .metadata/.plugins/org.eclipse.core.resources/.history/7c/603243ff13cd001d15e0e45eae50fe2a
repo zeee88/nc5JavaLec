@@ -1,0 +1,50 @@
+package chap17_generic.clazz;
+
+public class BoardFile<T>{
+	//T == FreeBoard일때는 boardNo == fBoardNo
+	//T == NoticeBoard일때는 boardNo == nBoardNo
+	private int boardNo;
+	private int type;
+	private String boardFileNm;
+	
+	private T t;
+
+	public int getBoardNo() {
+		return boardNo;
+	}
+
+	public void setBoardNo(int boardNo) {
+		this.boardNo = boardNo;
+	}
+
+	public int getTyte() {
+		return type;
+	}
+
+	public void setTyte(int type) {
+		this.type = type;
+	}
+
+	public String getBoardFileNm() {
+		return boardFileNm;
+	}
+
+	public void setBoardFileNm(String boardFileNm) {
+		this.boardFileNm = boardFileNm;
+	}
+
+	public T getT() {
+		return t;
+	}
+
+	public void setT(T t) {
+		this.t = t;
+	}
+
+	@Override
+	public String toString() {
+		return "BoardFile [boardNo=" + boardNo + ", type=" + type + ", boardFileNm=" + boardFileNm + "]";
+	}
+	
+	
+}

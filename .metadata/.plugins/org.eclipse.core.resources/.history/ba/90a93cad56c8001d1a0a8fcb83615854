@@ -1,0 +1,15 @@
+package chap13_objectarray.clazz;
+
+public class Mathmetics implements ILecture{
+
+	private int student;
+	
+	@Override
+	public void proceedLecture() {
+		System.out.println("학생 수는 "+ student);
+		
+	}
+	
+	
+
+}

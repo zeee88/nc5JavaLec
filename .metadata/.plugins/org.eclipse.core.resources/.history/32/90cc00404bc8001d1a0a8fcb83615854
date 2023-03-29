@@ -1,0 +1,24 @@
+package Homework._0321;
+
+public class Regular extends employee {
+
+	private double bonus;
+
+	public Regular(int eno, String name, long pay, double bonus) {
+		super(eno, name, pay);
+		this.bonus = bonus;
+	}
+
+	@Override
+	public double getMonthPay() {
+		return this.pay / 12 + this.bonus / 12;
+		
+	}
+
+	@Override
+	public void showEmployeeInfo() {
+		// TODO Auto-generated method stub
+		super.showEmployeeInfo();
+	}
+	
+}

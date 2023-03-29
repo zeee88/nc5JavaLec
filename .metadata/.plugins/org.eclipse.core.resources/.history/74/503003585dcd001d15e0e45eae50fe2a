@@ -1,0 +1,42 @@
+package Homework_0328;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericCla<T> {
+
+	private T t;
+
+	public T getT() {
+		return t;
+	}
+
+	public void setT(T t) {
+		this.t = t;
+	}
+	public static <T> String add(T t1, T t2) {
+		
+		String str = "";
+		return  (String)t1.concat((String)t2);     //String 붙이기 concat  //StringBuffer 붙이기 append
+	
+	public static Integer add(List<?> list) {
+		
+		
+	}
+	
+	public void printArr(){
+		List <T> returnList = new ArrayList<T>();
+		
+		T[] Arr;   //제네릭은 배열 생성 불가,  배열 타입의 참조변수를 선언하는 것만 가능
+		int index= 0;
+		if(index % 3 == 0) {
+			returnList.add(t);
+		}	
+		
+		
+		
+	}
+	
+	
+	
+}

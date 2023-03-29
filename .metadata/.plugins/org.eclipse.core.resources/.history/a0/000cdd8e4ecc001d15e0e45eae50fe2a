@@ -1,0 +1,13 @@
+package chap16_collectionFramework;
+
+public class _04_arrayListEx02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//사용자가 문자열을 입력
+		//길이가 10보다 작으면 
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package Homework_0328;
+
+public class GenericCla<T> {
+
+	private T t;
+}
