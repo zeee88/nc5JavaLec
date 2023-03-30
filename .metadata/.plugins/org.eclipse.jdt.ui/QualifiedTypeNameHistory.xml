@@ -49,4 +49,8 @@
     <fullyQualifiedTypeName name="chap18_enum.enums.CusMonth"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="chap18_enum.enums.ValueMonth"/>
+    <fullyQualifiedTypeName name="chap18_enum.enums.RGB"/>
+    <fullyQualifiedTypeName name="chap18_enum.enums.MethodMonth"/>
+    <fullyQualifiedTypeName name="chap18_enum.enums.Calculator"/>
 </qualifiedTypeNameHistroy>

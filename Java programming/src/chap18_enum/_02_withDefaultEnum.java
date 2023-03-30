@@ -8,7 +8,7 @@ public class _02_withDefaultEnum {
 		// TODO Auto-generated method stub
 		//DefaultMonth형의 변수 선언
 		//DefaultMonth.JAN을 값으로 갖는
-		//DefaultMonth의 열거형 객체가 하나 생성
+		//DefaultMonth의 열거형 객체가 하나 생성  (공통명칭.상수명)
 		DefaultMonth jan = DefaultMonth.JAN;
 		
 		//DefaultMonth의 열거형 객체의 이름(상수의 이름)
