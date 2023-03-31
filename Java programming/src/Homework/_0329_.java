@@ -113,6 +113,28 @@ public class _0329_ {
 //		
 //		int [] input = new int [3];
 //		
+//		//입력값 저장
+//		for(int i = 0; i < 3; i++) {
+//			input[i] = sc.nextInt();
+//		}
+//		
+//		
+//		//2중 for문으로 앞 뒤 값 비교하면서 바꿔주기(버블 정렬). 작을 수록 배열 앞부분.
+//		for(int i = 0; i < input.length - 1; i++) {
+//			for(int j = i + 1; j < input.length; j++) {
+//				if(input[i] > input[j]) {
+//				int tmp = input[i];
+////				 	input[i] = input[j];
+//				 	input[j] = tmp;
+//				
+//			}
+//		}
+//		}
+//		System.out.println("최소값: " + input[0]);
+//		System.out.println("중간값: " + input[1]);
+//		System.out.println("최대값: " + input[2]);
+		
+		//max, min 설정해서 if문으로 구하는 방법
 //		int max = 0;
 //		int min = 0;
 //		
@@ -134,29 +156,7 @@ public class _0329_ {
 //		
 //			System.out.println("max : " + max + "  middle: " + middle + "  min : " + min);
 		
-		
-		
-		//2중 for문으로 앞 뒤 값 비교하면서 바꿔주기
-//		int[] num = new int[3];
-//        for (int i = 0; i < 3; i++) {
-//            System.out.print("정수 : ");
-//            num[i] = sc.nextInt();
-//        }
-//        // 4 3
-//        for (int i = 0; i < num.length-1; i++) {
-//            for (int j = i + 1; j < num.length; j++) {
-//                if (num[i] > num[j]) {
-//                    int tmp = num[i];
-//                    num[i] = num[j];
-//                    num[j] = tmp;
-//                }
-//            }
-//        }
-//
-//        System.out.println("최소값: " + num[0]);
-//        System.out.println("중간값: " + num[1]);
-//        System.out.println("최대값: " + num[2]);
-		
+
         
         
         
@@ -206,14 +206,14 @@ public class _0329_ {
 //			Arr[i] = sc.nextInt();
 //		
 //			if(2 <= Arr[i] && Arr[i] <= 30) {
-//				boolean b = true;
+//				boolean b = true;					//if문의 조건이 true이면 계속 시행.
 //				for(int j = 2; j < Arr[i]; j++) {
 //					if(Arr[i] % j == 0) {
-//					b = false;
+//					b = false;						//false면 출력 값에서 제외
 //					break;
 //				}
 //				}	
-//				if(b) 
+//				if(b) 								//b의 true, false를 판단해서 시행.
 //						count++;
 //			} 
 //		else
@@ -222,14 +222,6 @@ public class _0329_ {
 //		System.out.println("입력한 수 중 소수의 갯수는 " + count + "개 입니다.");
 		
 
-		
-		
-//		for문 써서 
-//		소수는 1과 자기자신만 있다. 그래서
-//		1부터 n까지 나머지가 없으면 소수가 아니다.
-//		그래서 1부터 n까지 나머지가 1개 라도 없으면 소수가 아니라서 false,
-//		나머지가 전부 있었을 때 소수가 맞으므로, count++이 된다.
-		
 		
 		
 	}

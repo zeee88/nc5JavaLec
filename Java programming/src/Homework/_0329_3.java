@@ -59,15 +59,17 @@ public class _0329_3 {
 //		4. 사용자로부터 입력받은 문자열이 "Hello"인지 아닌지 판별하는 프로그램을 작성하세요.
 
 //		Scanner sc = new Scanner(System.in);
-//		System.out.println("문자열을 입력하세요");
+//		System.out.println("Hello를 입력하세요");
 //		String input = sc.next();
-		
-//		if(true) {
-//			System.out.println("Hello가 맞ㅅ");   ???????????????????????????????????????
-//			
+//		
+//		switch(input) {
+//		case "Hello" :
+//			System.out.println("Hello가 맞습니다.");  
+//			break;
+//		default :
+//			System.out.println("다시 입력해주세요");
 //		}
-		
-//		switch   boolean
+			
 		
 		
 		

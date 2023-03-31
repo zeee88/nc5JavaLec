@@ -40,7 +40,6 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="chap06_class.car.Car"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="chap17_generic.clazz.NoticeBoard"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
@@ -53,4 +52,7 @@
     <fullyQualifiedTypeName name="chap18_enum.enums.RGB"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.MethodMonth"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.Calculator"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>
