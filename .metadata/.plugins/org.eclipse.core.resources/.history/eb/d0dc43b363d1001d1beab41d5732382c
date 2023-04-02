@@ -1,0 +1,13 @@
+package Homework_0330;
+
+public class Multiple {
+
+	
+	public int num1;
+	public double num2;
+	
+	public void result(int num1, double num2) {
+		
+	}
+	
+}

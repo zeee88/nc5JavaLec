@@ -105,10 +105,12 @@ import java.util.Map.Entry;
 					maxkey = ent.getKey();
 					maxval = ent.getValue();
 			}	
-			
+		}	
 			index++;
 		}
+	
 		return maxkey;
+		
 	}
 	
 	public int add(List<Integer> inList) {

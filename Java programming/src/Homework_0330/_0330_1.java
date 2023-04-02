@@ -1,11 +1,12 @@
 package Homework_0330;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class _0330_1 {
 
-	public static void main(String[] args) {
+	public static void main(_03[] args) {
 		
 		
 		
@@ -27,24 +28,30 @@ public class _0330_1 {
 //		Scanner sc = new Scanner(System.in);
 //		
 //		int [] arr = new int[100];			//정수 배열 생성
-//		
-//		String input = sc.next();	//정수 입력받아야 하는데 String??
+//		int size = 0;
 //		
 //		while(true) {
-//			System.out.println("정수를 입력하세요 (종료 : q)");
+//			System.out.println("정수를 입력하세요 (q 입력 시 종료)");
+//			String input = sc.nextLine();			//일단 String으로 저장할 공간 만들어 줌 
 //			
 //			if(input.equals("q")) {
-//				
 //				break;								//반복문 종료.
 //			}
-//			int num = Integer.parseInt(input);
+//			
+//			try{
+//				int num = Integer.parseInt(input);		//문자열을 정수로 반환
+//				arr[size++] = num;
+//			}catch(NumberFormatException e){		//문자열이 정수가 아니면 예외 처리
+//				System.out.println("잘못된 입력입니다. 다시 입력해주세요");
+//			}
 //			
 //		}
-//			arr[i] = 
-//					
-//		for(int i = 0; i < 100; i++) {
-//			
+//		
+//		//배열의 모든 요소 출력
+//		for(int i = 0; i < size; i++) {
+//			System.out.println(arr[i]);
 //		}
+			
 
 		
 		
@@ -55,7 +62,7 @@ public class _0330_1 {
 //		int [] arr = new int[10];
 //		
 //		int sum = 0;
-//		int cnt = 10;
+//		float average = 0;
 //
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("정수 10개를 입력하세요");
@@ -64,8 +71,9 @@ public class _0330_1 {
 //			sum += arr[i];
 //			
 //		}
+//		average= sum / (float)arr.length;		//평균: 배열의 길이로 나누기
 //		
-//		System.out.println("입력한 정수들의 평균 : " + sum/cnt);
+//		System.out.println("입력한 정수들의 평균 : " + sum/average);
 		
 		
 		
@@ -139,41 +147,50 @@ public class _0330_1 {
 //		7. 두 개의 정수형 배열을 만들고 1 ~ 100까지의 랜덤한 값으로 
 //		첫 번째 배열은 4개 두 번째 배열은 3개를 저장하고 두 배열을 합친 새로운 배열을 생성하세요.
 		
-		int [] arr1 = new int[4];
-		int [] arr2 = new int[3];
-		
-		int [] nArr = new int[arr1.length + arr2.length];  //두 개의 배열 합치기
-		
-		Random radom = new Random();		//랜덤한 값 생성
-		int num = radom.nextInt(100) + 1;	//random.nextInt(100)는 0부터 99까지의 숫자만 반환하므로
-											//100까지 포함하려면 +1을 해야함
-		
-		
-		//랜덤값 저장
-		for(int i = 0; i < arr1.length; i++) {
-			arr1[i] = radom.nextInt();
-			System.out.println("arr1 배열 : "+ arr1[i]);
-		}
-		for(int i = 0; i < arr2.length; i++) {
-			arr2[i] = radom.nextInt();
-			System.out.println("arr2 배열 : "+ arr2[i]);
-		}
-		
-		//새로운 배열에 저장
-		for(int i = 0; i < arr1.length; i++) {
-			nArr[i] = arr1[i];
-		}
-		
-		for(int i = 0; i < arr2.length; i++) {
-			nArr[arr1.length] = arr2[i];
-		}
-		
-		//배열 복사. arraycopy 함수
-		
-		//출력
-		for(int i = 0; i < nArr.length; i++) {
-			System.out.println(nArr[i]);
-		}
+//		int [] arr1 = new int[4];
+//		int [] arr2 = new int[3];
+//		
+//		int [] nArr = new int[arr1.length + arr2.length];  //두 개의 배열 합치기
+//		
+//		int radom = (int)(Math.random()*100) + 1;	// Math.random()은 0이상 1.0 미만의 실수를 반환.
+//												//100까지 포함하려면 +1을 해야함
+//		
+//		
+//		//랜덤값 저장
+//		for(int i = 0; i < arr1.length; i++) {
+//			arr1[i] = (int)(Math.random()*100) + 1;
+//			System.out.println("arr1 배열 : "+ arr1[i]);
+//		}
+//		for(int i = 0; i < arr2.length; i++) {
+//			arr2[i] = (int)(Math.random()*100) + 1;
+//			System.out.println("arr2 배열 : "+ arr2[i]);
+//		}
+//		
+//		//새로운 배열에 저장
+//		for(int i = 0; i < arr1.length; i++) {
+//			nArr[i] = arr1[i];
+//		}
+//		
+//		for(int i = 0; i < arr2.length; i++) {
+//			nArr[arr1.length+i] = arr2[i];			//arr1[i]가 들어간 이후 부터 arr2[i] 저장.
+//		}
+//		
+////		//(다른 방법) 두개의 배열 합. arraycopy 함수 사용해보기
+////		int[] newArr = new int[arr1.length + arr2.length];
+////		System.arraycopy(arr1, 0, newArr, 0, arr1.length);
+////		System.arraycopy(arr2, 0, newArr, arr1.length, arr2.length);
+////		
+////		System.out.println(Arrays.toString(newArr));	//배열의 값을 문자열로 변환
+//		
+//		
+//		
+//		System.out.println("------------------");
+//		
+//		//출력
+//		
+//		for(int i = 0; i < nArr.length; i++) {
+//			System.out.println("새로운 배열 값" + nArr[i]);
+//		}
 		
 		
 	
@@ -189,7 +206,7 @@ public class _0330_1 {
 //		System.out.println("문자열을 입력하세요");
 //		String inputstr = sc.nextLine();
 //		
-//		String [] strArr = inputstr.split("-");       //입력한 값 사이 마다 "-" 넣기
+//		String [] strArr = inputstr.split("-");       //split "-" 기준으로 잘라서 배열 생성
 //		
 //		String maxLength = strArr[0];
 //		
@@ -203,7 +220,6 @@ public class _0330_1 {
 //		sc.close();
 		
 		
-		//????????????????????? 이거 맞아??????????????뭐야
 		
 		
 		

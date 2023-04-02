@@ -1,0 +1,22 @@
+package Homework_0330;
+
+public class _03 {
+
+	public String str1;
+	public String str2;
+	public String newStr;
+	
+	
+	public void info(String str1, String str2, String newStr) {
+		this.str1 = str1;
+		this.str2 = str2;
+		this.newStr = newStr;
+	}
+	
+	
+	public void nnew() {
+		System.out.println("입력한 문자열의 합: " + newStr);
+	}
+	
+	
+}

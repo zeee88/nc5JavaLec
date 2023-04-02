@@ -1,0 +1,26 @@
+package Homework_0330;
+
+public class Book {
+
+	public _03 title;
+	public _03 writer;
+	public _03 publisher;
+	public int price;
+	
+	
+	public void bookInfo(_03 title, _03 writer, _03 publisher, int price) {
+		this.title = title;
+		this.writer = writer;
+		this.publisher = publisher;
+		this.price = price;
+	}
+	
+	public void bookPrint() {
+		System.out.println("제목: " + title);
+		System.out.println("저자: " + writer);
+		System.out.println("출판사: " + publisher);
+		System.out.println("가격: " + price);
+	}
+	
+	
+}

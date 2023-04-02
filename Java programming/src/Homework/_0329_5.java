@@ -22,11 +22,17 @@ public class _0329_5 {
 //		2. 2의 거듭제곱을 10회동안 반복하며 출력하세요.(2 * 2 = 4, 2 * 2 * 2 = 8 .....) 10회 반복 출력
 		
 		
-//		int result = 0;
+//		int sum = 2;
+//		
 //		for(int i = 0; i < 10; i++) {
-//			System.out.println("2 * " + i + " = " + result);
-//			result *= 2;
-//		}  //????????????????????????????????
+//			for(int j = 0; j <= i; j++) {
+//				System.out.print("2 *");		//for문 안에서 계속 반복될 문자
+//			}
+//			sum *= 2;			//sum = sum * 2;
+//			System.out.print("2 = " + sum);
+//			System.out.println();		
+//		}
+		
 		
 		
 		
@@ -110,26 +116,30 @@ public class _0329_5 {
 		
 //		7. 사용자가 입력한 두 정수의 최소공배수와 최대공약수를 출력하세요.
 
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("두 개의 정수를 입력하세요");
-		int num1 = sc.nextInt();
-		int num2 = sc.nextInt();
-		
-		int gcd = 0;
-		
-		for(int i = 1; (i <= num1)&&(i <= num2); ++i) {
-			if(num1 % i == 0 && num2 % i == 0) {
-				gcd = i;
-				System.out.println(gcd);
-			}
-		}
-		
-		
-		
-		
-		
-		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.println("두 개의 정수를 입력하세요");
+//		int num1 = sc.nextInt();
+//		int num2 = sc.nextInt();
+//		
+//		int gcd = 0;
+//		
+//		
+//		//최대공약수
+//		for(int i = 1; (i <= num1)&&(i <= num2); ++i) {
+//			if(num1 % i == 0 && num2 % i == 0) {		//i는 num1과 num2의 약수
+//				gcd = i;								//num1과 num2의 최대공약수
+//				System.out.println(gcd);
+//			}
+//		}
+//
+//
+//		
+//		//최소공배수
+//		int common = num1 * num2 / gcd;
+//		
+//		System.out.println("최대공약수: " + gcd);
+//		System.out.println("최소공배수: " + common);
 		
 		
 		
@@ -179,6 +189,7 @@ public class _0329_5 {
 //		        **
 //		         *
 
+		
 //		for(int i = 1; i <= 5; i++) {
 //			for(int j = 1; j <=5; j++) {
 //				if(i>j) {
@@ -191,6 +202,19 @@ public class _0329_5 {
 //		}
 		
 		
+//		for(int i = 1; i <= 5; i++) {
+//			for(int j = 1; j < i; j++) {
+//				System.out.print(" ");
+//			}
+//			for(int j = 5; j >= i; j--) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		} 
+		
+		
+		
+		
 //		8-3.    
 //		*****
 //		****
@@ -198,26 +222,74 @@ public class _0329_5 {
 //		**
 //		*
 		
-//		for(int i = 1; i <= 5; )
+//		for(int i = 5; i >= 1; i--) {
+//			for(int j = 1; j <= i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}	
 		
 		
 		
 		
+//		8-4.
+//			*
+//		   **
+//		  ***
+//		 **** 
+//		*****
+		
+//		for(int i = 5; i >= 1; i--) {
+//			for(int j = 1; j < i; j++) {
+//				System.out.print(" ");
+//			}
+//			for(int j = 5; j >= i; j--) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
 		
 		
+
 		
 //		9. 사용자가 q를 입력하기 전까지 계속 반복하면서 입력한 정수의 값을 더해서 출력하세요.
 		
 //		Scanner sc = new Scanner(System.in);
 //		
-//		int [] arr = {};
-//		arr[i] = sc.nextInt();
-//	
-//		if(arr[i] == ch)
+//		int [] arr = new int [100];
+//		int size = 0;
+//		int sum = 0;
+//		
+//		while(true) {
+//			System.out.println("정수를 입력하세요(q입력 시 종료)");
+//			String input = sc.nextLine();
+//			
+//			if(input.equals("q")) {
+//				break;
+//			}
+//			
+//			try{
+//				int num = Integer.parseInt(input);
+//				arr[size++] = num;
+//				sum += num;
+//			}catch(NumberFormatException e) {
+//				System.out.println("잘못된 입력입니다. 다시 입력해주세요");
+//			}
+//			
+//			
+//		}
+//		
+//		System.out.println("입력한 정수는");
+//		System.out.println(sum);
+//		
 		
-//		while문 쓰면서 반복.
-//		입력된 값이 " " 문자열이면 종료. ??????????????????????????????
-		
+			
+			
+			
+			
+			
+			
+			
 	}
 
 }

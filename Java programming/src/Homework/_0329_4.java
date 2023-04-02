@@ -167,8 +167,33 @@ public class _0329_4 {
 //		9. 사용자가 입력한 세 정수가 모두 짝수인 경우 "모두 짝수입니다." 모두 홀수인 경우 "모두 홀수입니다." 그 외의 경우 "짝수 : xxx개, 홀수 : xxx개 입니다."를 출력하세요.
 		
 		
+		
+		//방법1
 //		Scanner sc  = new Scanner(System.in);
 //		
+//		int [] arr = new int[3];
+//		int cnt = 0;
+//		int acnt = 0;
+//		
+//		for(int i = 0; i < arr.length; i++) {
+//			arr[i] = sc.nextInt();
+//			if(arr[i] % 2 == 0) {
+//				cnt++;
+//			}else if(arr[i] % 2 != 0){
+//				acnt++;
+//			}
+//		}
+//		
+//		if(cnt == 3)
+//			System.out.println("모두 짝수 입니다.");
+//		else if(acnt ==3)
+//			System.out.println("모두 홀수 입니다.");
+//		else
+//			System.out.println("짝수는 : " + cnt + "홀수는 : " + acnt);
+		
+		
+		
+		//방법2
 //		int input1 = sc.nextInt();
 //		int input2 = sc.nextInt();
 //		int input3 = sc.nextInt();
@@ -199,12 +224,6 @@ public class _0329_4 {
 //				System.out.println("모두 홀수입니다.");
 //			}else
 //				System.out.println("짝수 : " + Cnt + "개, 홀수 : " + aCnt + "개 입니다.");
-		
-		
-		
-		
-		
-		//?????????????????????더 간단한 방법 찾아보기
 		
 		
 		

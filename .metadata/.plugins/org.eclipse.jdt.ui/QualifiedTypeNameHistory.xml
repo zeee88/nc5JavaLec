@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="animal.animal_"/>
     <fullyQualifiedTypeName name="animal.Cat"/>
     <fullyQualifiedTypeName name="chap10_abstraction.product.Academy"/>
     <fullyQualifiedTypeName name="chap11_interface.multiinherit.MultiflexStadium"/>
@@ -52,7 +51,13 @@
     <fullyQualifiedTypeName name="chap18_enum.enums.RGB"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.MethodMonth"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.Calculator"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Thread.State"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="Homework_0330.Student"/>
+    <fullyQualifiedTypeName name="Homework_0330.Book"/>
+    <fullyQualifiedTypeName name="Homework_0330._03"/>
 </qualifiedTypeNameHistroy>
