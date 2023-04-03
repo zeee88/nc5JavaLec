@@ -1,0 +1,17 @@
+package chap19_multithread.clazz;
+
+public class SyncThread2 extends Thread{
+	private printNumWithSync pns;
+
+	public SyncThread2() {
+		pns.printNum2();
+	}
+	public void setPns(printNumWithSync pns) {
+		this.pns = pns;
+	}
+	
+	@Override
+	public void run() {
+		pns.printNum2();
+	}
+}

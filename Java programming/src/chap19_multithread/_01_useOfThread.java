@@ -17,7 +17,8 @@ public class _01_useOfThread {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						e.printStackTrace();	
+		//.printStackTrace(); 예외 발생 시 예외 정보(예외가 발생한 위치, 예외 메시지, 예외 타입)를 출력하는데 사용
 					}
 				}
 			}

@@ -10,7 +10,7 @@ public class _03_treadName {
 		for(int i = 0; i < 3; i++) {
 			Thread thread2 = new Thread() {
 				@Override
-				public void run() {
+				public void run() {		            //public void run() 메소드 안에 있는 스레드는 서브스레드
 					System.out.println(getName() + "동작중");		//Thread-0, 1, 2
 				}
 			};
