@@ -1,0 +1,17 @@
+package Homework_0404;
+
+public class IntArrUtils {
+	
+	
+	public int getMax(int [] arr) {
+		
+		int max = 0;
+		
+		
+		
+	}
+	
+	
+	
+
+}

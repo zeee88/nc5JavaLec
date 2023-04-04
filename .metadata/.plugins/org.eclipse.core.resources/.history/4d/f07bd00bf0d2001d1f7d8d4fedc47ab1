@@ -20,7 +20,7 @@ public class IntArrUtils {
 		int max = arr[0];
 		
 		for(int i = 0; i < arr.length; i++) {
-			if(arr[i] > max) {		//arr[0]이 아니라 max로 변수명을 써야 함.
+			if(arr[i] > arr[0]) {
 				max = arr[i];
 			}
 		}
@@ -31,7 +31,7 @@ public class IntArrUtils {
 		int min = arr[0];
 		
 		for(int i = 0; i < arr.length; i++) {
-			if(arr[i] < min) {		//arr[0]이 아니라 min로 변수명을 써야 함.
+			if(arr[i] < arr[0]) {
 				min = arr[i];
 			}
 		}
@@ -50,8 +50,8 @@ public class IntArrUtils {
 				}
 			}
 		}
-		 int mid = arr[arr.length/2];		//배열의 길이 중 중간 인덱스
-			return mid;
+		
+			return (arr.length)/2;
 		
 	}
 	
