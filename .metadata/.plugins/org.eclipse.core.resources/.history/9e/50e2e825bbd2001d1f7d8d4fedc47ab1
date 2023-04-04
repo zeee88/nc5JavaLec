@@ -1,0 +1,8 @@
+package chap20_lambda.clazz;
+
+
+public class CustomString3 {
+	public String toUpperCase(Sting a, String b, char ch);
+	
+	
+}

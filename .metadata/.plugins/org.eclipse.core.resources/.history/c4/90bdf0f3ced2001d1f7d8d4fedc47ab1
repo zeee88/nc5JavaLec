@@ -1,0 +1,10 @@
+package Homework_0404;
+
+
+@FunctionalInterface
+public interface printEvenNum {
+
+	public int evenNum (int [] arr) ;
+		
+
+}

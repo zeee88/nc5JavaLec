@@ -1,0 +1,17 @@
+package chap20_lambda;
+
+import chap20_lambda.clazz.Convertor;
+
+public class _05_referenceMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public static void action(Convertor con) {
+		int result = con.conv(1000000, '$');
+		System.out.println("반환된 돈 : "result);
+	}
+}

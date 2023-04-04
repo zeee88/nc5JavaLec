@@ -1,0 +1,5 @@
+package Homework_0404;
+
+public interface combineStrBuilder {
+
+}

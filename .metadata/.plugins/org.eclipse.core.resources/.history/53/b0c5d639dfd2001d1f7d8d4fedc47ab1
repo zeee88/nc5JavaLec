@@ -1,0 +1,23 @@
+package Homework_0404_use;
+
+import Homework_0404.combineStrBuilder;
+
+public class _02_ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		action((a , b) -> {
+			StringBuilder str = a.append(b).reverse();
+		});
+		
+	}
+
+	
+	
+	public static void action(combineStrBuilder cb) {
+		
+		StringBuilder stb = cb.combineStr(new StringBuilder("안녕"), new StringBuilder("하세요"));
+		System.out.println(stb);
+	}
+}

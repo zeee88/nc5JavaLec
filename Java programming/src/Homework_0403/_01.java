@@ -57,24 +57,32 @@ public class _01 {
 //		1. 사용자가 입력한 수(실수나 정수 모두 가능)를 StringBuilder로 받아서 
 //		점(.)이 포함되면 double형으로 포함되지 않으면 int형으로 변경 후 출력하세요.
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("실수나 정수를 하나 입력하세요");
-		
-		StringBuilder sb = new StringBuilder(sc.nextLine());
-		
-		String str = String.valueOf(sb);
-		
-		
-		if(str.contains(".")) {
-			double d = Double.parseDouble(str);
-			System.out.println("더블형 변환: " + d + 1);
-		}else {
-			int a = Integer.parseInt(str);
-			System.out.println("인트형 변환: " + a + 1);
-		}
-		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("실수나 정수를 하나 입력하세요");
+//		
+//		StringBuilder sb = new StringBuilder(sc.nextLine());    //StringBuilder로 입력값 바로 저장
+//		
+//		//.을 포함하지 않은 경우 true반환(if문 실행), 포함할 경우 false반환(else문 실행)
+//		//indexOf는 처음부터 검사하는데 () 안의 값을 못찾으면 -1을 리턴함
+//		if(sb.indexOf(".") == -1) {
+//			int a = Integer.parseInt(sb.toString());
+//			System.out.println(a + (int)1);
+//		}else {
+//			double b = Double.parseDouble(sb.toString());
+//			System.out.println(b + 1);
+//		}
 		
 		
+		
+//		//<다른 방법>
+//		String str = String.valueOf(sb);
+//		if(str.contains(".")) {
+//			double b = Double.parseDouble(str);
+//			System.out.println(b + 1);
+//		}else {
+//			int a = Integer.parseInt(str);
+//			System.out.println(a + (int)1);
+//		}
 				
 		
 		
@@ -116,11 +124,16 @@ public class _01 {
 		
 		
 //			for(int i = 1; i <= 20; i++) {
-//			System.out.println((i >= 2)&&((i%2 != 0)||(i%3 != 0)||(i%5 != 0)||(i%7 != 0)) ? 
-//					i + "는 소수 입니다." :  (i%4 == 0) ? i + "는 4의 배수입니다." : i + "는 4의 배수가 아닙니다."); 
-//					
-//					}
-				//?????????????????????????????/
+//				int cnt = 0;
+//				for(int j = 2; j <= i; j++) {
+//					if((i != j)&&(i%j == 0)) {
+//						cnt++;						//소수가 아닌 수의 개수를 세준다
+//					}	
+//				}
+//					System.out.println(cnt > 0 ?(i%4 == 0) ?
+//						 i + "는 4의 배수입니다." : i + "는 4의 배수가 아닙니다.":  i + "소수입니다."); 
+//				}
+				
 			
 		
 		
@@ -131,27 +144,35 @@ public class _01 {
 //		     20미만이면 문자열에 n, a, v, e, r 다섯개의 문자를 순서대로 추가하여
 //		     문자열의 길이가 20이 되면 그 때 문자열을 출력하세요.
 		
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("문자열을 입력하세요");
-//		
-//		String input = sc.nextLine();
-//		
-//		if(input.length() >= 20) {
-//			for(int i = input.length()-1 ; i >= 0; i--) {
-//				System.out.print(input.charAt(i));
-//			}
-//				
-//		}else if(input.length() < 20) {
-//			
-//			
-//			String str = "";
-//			int length = 20;
-//			while(str.length() < length) {
-//				str += "naver";
-//			}
-//				System.out.println(input + str);
-//				
-//		}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("문자열을 입력하세요");
+		
+		String input = sc.nextLine();
+		
+		if(input.length() >= 20) {
+			for(int i = input.length()-1 ; i >= 0; i--) {
+				System.out.print(input.charAt(i));
+			}
+			
+				
+//			<다른 방법>
+//			StringBuilder sb = new StringBuilder(input);
+//			System.out.println(sb.reverse());
+			
+			
+		}else {
+				char [] chArr = {'n', 'a', 'v', 'e', 'r'};			
+				for(int i = 0; i < 20 - input.length(); i++) {
+					input = input.concat(String.valueOf(chArr[i]));
+					
+				}
+				
+			
+		}
+			
+				System.out.println(input);
+				
+	
 			
 			
 		
@@ -164,10 +185,13 @@ public class _01 {
 //		    반복문에서 사용자가 입력한 문자열에 "bit"를 계속 추가하세요. 그리고 bit가 몇 번
 //		    추가됐는지 개수를 세서 출력하세요. 랜던 값을 그대로 출력하면 안됩니다.
 
-//		int num = (int)(Math.random()*20 + 1);
-//		String str = 
+//		System.out.println("문자열을 입력하세요");
+//		Scanner sc = new Scanner(System.in);
+//		String input = sc.nextLine();
 //		
-//		for(int i = 0 ; i < )
+//		for(int i = 1 ; i <= (int)(Math.random()*20) + 1; i++) {
+//			input = input.concat("bit");
+//		}
 		
 		
 		
@@ -180,6 +204,16 @@ public class _01 {
 //		1. 길이가 12인 char 배열을 선언하고 {'b', 'c', 's', 'i', 'i', 'o', 'q', 'n', 't', 'm', 'l', 't'}로 초기화합니다.
 //		   단어를 bit, com, sql, int로 만들어서 모두 출력하세요.(힌트 bit => [0], [4], [8]에 있습니다.)
 		
+		
+		
+		//bit 배열 인덱스 = 048 4로 나누면 나머지 0
+		//com 배열 인덱스 = 159 2로 나누면 나머지 1
+		//sql 배열 인덱스 = 2610 
+		//int 배열 인덱스 = 3711  4로 나누면 나머지 3
+		
+		
+		//concat 사용
+		//String.valueof
 		
 		
 	}

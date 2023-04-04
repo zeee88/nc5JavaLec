@@ -1,0 +1,9 @@
+package Homework_0404;
+
+
+@FunctionalInterface
+public interface combineStrBuilder {
+
+	 StringBuilder combineStr(StringBuilder a, StringBuilder b);
+	
+}

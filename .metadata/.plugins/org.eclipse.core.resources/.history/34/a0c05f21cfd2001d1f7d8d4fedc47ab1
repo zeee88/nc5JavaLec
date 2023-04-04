@@ -1,0 +1,18 @@
+package Homework_0404_use;
+
+import Homework_0404.printEvenNum;
+
+public class _01_ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public static void action(printEvenNum en) {
+		
+		en.evenNum(arr);
+		
+	}
+}

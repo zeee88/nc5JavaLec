@@ -1,0 +1,20 @@
+package chap20_lambda;
+
+import chap20_lambda.clazz.CompareStr;
+
+public class _07_ {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		action(String :: equals);	//equals가 밑의 action에 들어가서 두 문자를 비교해 줌
+		
+	}
+
+	
+	public static void action(CompareStr ct) {
+		boolean result = ct.compareTwoStr("naver", "never");
+		System.out.println(result);
+		
+	}
+}

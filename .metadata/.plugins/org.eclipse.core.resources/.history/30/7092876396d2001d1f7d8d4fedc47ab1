@@ -1,0 +1,21 @@
+package chap19_multithread;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import chap19_multithread.clazz.SumThread1;
+import chap19_multithread.clazz.SumThread2;
+
+public class _15_threadPool {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		ExecutorService es = Executors.newFixedThreadPool(5);
+		
+		es.execute(new SumThread1());
+		es.execute(new SumThread2());
+	}
+
+}

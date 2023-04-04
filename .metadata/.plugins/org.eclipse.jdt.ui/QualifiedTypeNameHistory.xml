@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="animal.Cat"/>
-    <fullyQualifiedTypeName name="chap10_abstraction.product.Academy"/>
-    <fullyQualifiedTypeName name="chap11_interface.multiinherit.MultiflexStadium"/>
-    <fullyQualifiedTypeName name="chap11_interface.multiinherit.SeoulMultiflexStadium"/>
-    <fullyQualifiedTypeName name="chap11_interface.device.ElectronicDevice"/>
-    <fullyQualifiedTypeName name="chap12_nestedclass.Outer.Mul"/>
-    <fullyQualifiedTypeName name="chap12_nestedclass.NestedClass.Sub"/>
-    <fullyQualifiedTypeName name="chap12_nestedclass.NestedClass.add"/>
-    <fullyQualifiedTypeName name="chap12_nestedclass.NestedClass.Add"/>
     <fullyQualifiedTypeName name="Add"/>
     <fullyQualifiedTypeName name="Homework._0321.NestedClass.Sub"/>
     <fullyQualifiedTypeName name="Homework._0321.HybridCar"/>
@@ -46,7 +37,6 @@
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.CusMonth"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.ValueMonth"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.RGB"/>
     <fullyQualifiedTypeName name="chap18_enum.enums.MethodMonth"/>
@@ -54,10 +44,20 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="java.lang.Thread.State"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="Homework_0330.Student"/>
     <fullyQualifiedTypeName name="Homework_0330.Book"/>
     <fullyQualifiedTypeName name="Homework_0330._03"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.PrintNum"/>
+    <fullyQualifiedTypeName name="java.lang.Thread.State"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.printNumWithoutSync"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.NonSyncThread1"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.NonSyncThread2"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread2"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread1"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.PrintNumWithWaitNotify"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.whileThread"/>
+    <fullyQualifiedTypeName name="chap19_multithread.clazz.InterruptThread"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

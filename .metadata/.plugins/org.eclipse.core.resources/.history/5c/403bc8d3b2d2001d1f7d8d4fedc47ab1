@@ -1,0 +1,11 @@
+package chap20_lambda.clazz;
+
+
+@FunctionalInterface
+public interface CustomString2 {
+	String concat(String a, String b);
+	
+	int indexOf(String a, String b);
+	
+	
+}
