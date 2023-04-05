@@ -1,0 +1,29 @@
+package chap20_lambda;
+
+import chap20_lambda.clazz.ComAcademy;
+import chap20_lambda.clazz.EngAcademy;
+
+public class _08_referConstructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+	}
+
+	
+	public void comLectureInfo(ComAcademy ca) {
+		Acadymy ac = ca.getComAcademy("컴퓨터", 50);
+		ac.lectureInfo();
+	}
+
+	
+	public void engLectureInfo(EngAcademy ea) {
+		
+	}
+	
+	
+	
+	
+}

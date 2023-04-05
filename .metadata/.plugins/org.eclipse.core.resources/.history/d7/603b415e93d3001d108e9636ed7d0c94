@@ -1,0 +1,16 @@
+package Homework_0405_use;
+
+public class Student {
+
+	private int sno;
+	private String sName;
+	private int score;
+	private String grade;
+	
+	
+	public Student(int sno, String sName, int score, String grade) {
+		this.sno = sno;
+		
+	}
+	
+}

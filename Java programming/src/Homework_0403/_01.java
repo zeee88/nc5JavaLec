@@ -150,27 +150,47 @@ public class _01 {
 		String input = sc.nextLine();
 		
 		if(input.length() >= 20) {
+			
+//			<방법1>
 			for(int i = input.length()-1 ; i >= 0; i--) {
 				System.out.print(input.charAt(i));
 			}
-			
 				
-//			<다른 방법>
+//			<방법2>
 //			StringBuilder sb = new StringBuilder(input);
-//			System.out.println(sb.reverse());
+//			System.out.println(sb.reverse().toString());
 			
 			
 		}else {
-				char [] chArr = {'n', 'a', 'v', 'e', 'r'};			
-				for(int i = 0; i < 20 - input.length(); i++) {
-					input = input.concat(String.valueOf(chArr[i]));
-					
-				}
 				
-			
+//				StringBuilder sb = new StringBuilder(input);
+//				sb.append("naver");
+//				
+//				while(sb.length() < 20) {
+//					sb.append("");
+//				}
+//			
+//				System.out.println(sb.toString());
+				
+				
+				int cnt = 0;
+				
+				char [] chArr = {'n', 'a', 'v', 'e', 'r'};	
+				
+				for(int i = 0; i < 20 - input.length(); i++) {
+					if(i < 5) {
+						input = input.concat(String.valueOf(chArr[i]));
+					}else {
+						if(i%5 == 0) {cnt++;
+						}
+						input = input.concat(String.valueOf(chArr[i-(5*cnt)]));
+					
+					}
+				
+				}
 		}
-			
 				System.out.println(input);
+			
 				
 	
 			

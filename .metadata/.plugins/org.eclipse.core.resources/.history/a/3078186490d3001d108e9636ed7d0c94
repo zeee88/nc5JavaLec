@@ -1,0 +1,28 @@
+package Homework_0405;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class stream1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List <Integer> intList = new ArrayList <Integer>();
+		
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		intList.add((int)(Math.random() * 10 + 1));
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package Homework_0405;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class stream5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		List <String> strList = new ArrayList <String>();
+		
+		Stream <String> enList = strList.stream();
+		
+		for(char ch = 'a'; ch <= 'z'; ch++) {
+			strList.add(ch);
+		}
+		for(char ch = 'A'; ch <= 'Z'; ch++) {
+			strList.add(ch);
+		}
+		
+		
+		
+		
+		
+		Stream <String> strStream = strList.stream();
+		
+		Stream <String> filtStream = strStream.filter(a -> a.contains(a))
+		
+	}
+
+}

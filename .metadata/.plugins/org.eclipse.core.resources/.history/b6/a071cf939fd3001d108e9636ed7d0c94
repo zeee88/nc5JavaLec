@@ -1,0 +1,33 @@
+package Homework_0405_use;
+
+public class Card {
+
+	
+	public static void main(String[] args) {
+	
+	
+	
+	
+	}
+	
+	private String cardName;
+	private int validYear;
+	
+	
+	public Card(String cardName, int vaildYear) {
+		this.cardName = cardName;
+		this.validYear = vaildYear;
+		
+	}
+	
+	
+	
+	void vaildEnlong(CardVali en) {
+		
+		en.enlong(validYear);
+		
+		
+	}
+	
+	
+}

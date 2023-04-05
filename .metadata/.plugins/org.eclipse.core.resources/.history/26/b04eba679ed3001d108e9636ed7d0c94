@@ -1,0 +1,15 @@
+package Homework_0405_use;
+
+public class Card {
+
+	private String cardName;
+	private int validYear;
+	
+	
+	public Card(String cardName, int vaildYear) {
+		this.cardName = cardName;
+		this.validYear = vaildYear;
+		
+	}
+	
+}

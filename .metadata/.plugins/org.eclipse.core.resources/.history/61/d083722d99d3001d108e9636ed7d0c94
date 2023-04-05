@@ -1,0 +1,17 @@
+package Homework_0405;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class stream4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		List<Character> charList = new ArrayList <Character>();
+		
+		
+	}
+
+}

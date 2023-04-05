@@ -1,0 +1,23 @@
+package Homework_0405_use;
+
+public class _01 {
+
+	private int num;
+	
+	
+	public _01(int num) {
+		this.num = num;
+	}
+
+
+	public int getNum() {
+		return num;
+	}
+
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	
+}

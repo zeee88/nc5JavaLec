@@ -1,0 +1,38 @@
+package Homework_0405;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Stream;
+
+public class stream4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		char input [] = sc.next().toCharArray();
+		
+		
+		List<Character> charList = new ArrayList <Character>();
+		
+		
+		Stream <Character> chStream = charList.stream();
+		
+		Stream <Character> mapStream = chStream.map(m -> {m.toUpperCase(m);
+														return m;		
+														});
+		mapStream.forEach(m -> System.out.println(m));
+		}
+		
+		if('A' <= ch && ch <= 'Z') {
+		Stream <Character> mapStream2 = chStream.map(m -> {m.toLowerCase(m);
+														return m;
+														});
+		mapStream2.forEach(m -> System.out.println(m));
+		
+		}
+		
+	}
+
+}

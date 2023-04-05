@@ -4,7 +4,7 @@ package Homework_0404;
 @FunctionalInterface
 public interface printEvenNum {
 
-	 public void evenNum (int [] arr) ;  //배열형식은 void로
+	 public void evenNum (int [] arr) ;  
 
 		
 

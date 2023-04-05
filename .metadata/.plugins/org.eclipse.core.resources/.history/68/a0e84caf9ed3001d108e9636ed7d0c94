@@ -1,0 +1,10 @@
+package Homework_0405_use;
+
+@FunctionalInterface
+public interface CardVali {
+
+	public void enlong(int year) {
+		
+	}
+	
+}

@@ -1,0 +1,24 @@
+package Homework_0405_use;
+
+public class _01_Stream {
+
+	private int num;
+	
+	//생성자
+	public _01_Stream(int num) {
+		this.num = num;
+	}
+
+
+	public int getNum() {
+		return num;
+	}
+
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+
+	
+}

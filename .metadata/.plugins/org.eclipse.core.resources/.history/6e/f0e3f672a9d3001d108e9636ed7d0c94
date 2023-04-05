@@ -1,0 +1,44 @@
+package Homework_0405;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class stream4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		List<Character> charList = new ArrayList <Character>();
+		
+		Stream <Character> enList = charList.stream();
+		
+		for(char ch = 'a'; ch <= 'z'; ch++) {
+			charList.add(ch);
+		}
+		for(char ch = 'A'; ch <= 'Z'; ch++) {
+			charList.add(ch);
+		}
+		
+		System.out.println(charList);
+		
+		
+		Stream <Character> chStream = charList.stream();
+		
+		if('a' <= ch && ch <= 'z') {
+		Stream <Character> mapStream = chStream.map(m -> {m.isUPPERCase(m);
+														return m;		
+														});
+		}
+		
+		if('A' <= ch && ch <= 'Z') {
+		Stream <Character> mapStream2 = chStream.map(m -> {m.toLowerCase(m);
+														return m;
+														});
+		
+		}
+		
+	}
+
+}

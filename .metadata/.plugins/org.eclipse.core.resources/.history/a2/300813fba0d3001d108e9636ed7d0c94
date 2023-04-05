@@ -1,0 +1,80 @@
+package Homework_0405_use;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class Card {
+
+	
+	public static void main(String[] args) {
+	
+		List <Card> cardList = new ArrayList <Card>();
+		
+		cardList.add(new Card("a", 3));
+		cardList.add(new Card("b", 1));
+		cardList.add(new Card("c", 0));
+		cardList.add(new Card("d", 1));
+		cardList.add(new Card("e", 2));
+		cardList.add(new Card("f", 5));
+		
+		
+		Stream <Card> cardStream = cardList.stream(); 
+		Stream <Card> filStream = cardStream.filter(a -> a.validYear <= 1);
+		filStream.forEach(a -> System.out.println("카드이름: " + a.getCardName() + ", 유효기간: " + a.getValidYear()));
+	
+		//11번. 
+//		cardList.stream().map(a -> a.setValidYear(a.getValidYear()))
+	
+	}
+	
+	
+	
+	private String cardName;
+	private int validYear;
+	
+	
+	public Card(String cardName, int vaildYear) {
+		this.cardName = cardName;
+		this.validYear = vaildYear;
+		
+	}
+
+	
+	public String getCardName() {
+		return cardName;
+	}
+	
+	
+	
+	public void setCardName(String cardName) {
+		this.cardName = cardName;
+	}
+	
+	
+	
+	public int getValidYear() {
+		return validYear;
+	}
+	
+	
+	
+	public void setValidYear(int validYear) {
+		this.validYear = validYear;
+	
+	
+	}
+
+
+
+	//8번!!!!!!!!!!!
+	
+	void vaildEnlong(CardVali en) {
+		
+		en.enlong(validYear);
+		
+		
+	}
+	
+	
+}

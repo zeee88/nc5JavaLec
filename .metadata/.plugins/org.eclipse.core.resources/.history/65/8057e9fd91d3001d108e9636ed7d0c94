@@ -1,0 +1,23 @@
+package Homework_0405_use;
+
+public class Integer {
+
+	private int num;
+	
+	//생성자
+	public Integer(int num) {
+		this.num = num;
+	}
+
+
+	public int getNum() {
+		return num;
+	}
+
+
+	public int setNum(int num) {
+		this.num = num;
+	}
+	
+	
+}
