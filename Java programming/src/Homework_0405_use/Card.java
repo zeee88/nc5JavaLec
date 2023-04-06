@@ -46,13 +46,20 @@ public class Card {
 	
 	}
 
+	@Override
+	public String toString() {
+		return "Card [cardName=" + cardName + ", validYear=" + validYear + "]";
+	}
 
 
-	//8번
+	//8번. 6번에서 만든 validEnlong에서 연장할 유효기간과 CardVali를 매개변수로
+    // 받아서 현재 유효기간 + 매개변수로 받아온 유효기간으로 변경해주고
+    // 함수형 인터페이스 CardVali의 enlong을 호출합니다.
 	
+
 	public void vaildEnlong(int valid) {
 		
-		this.validYear += valid; 
+		this.validYear += valid; 		//유효기간 연장
 		
 		
 		

@@ -1,0 +1,15 @@
+package chap20_lambda.clazz;
+
+import java.util.Scanner;
+
+public class FourOpCalc {
+
+	
+	
+	public int calc(int a, int b, char op, FourOperation fo) {
+		Scanner sc = new Scanner(System.in);
+		
+		sc.close();
+	}
+	
+}

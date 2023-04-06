@@ -1,0 +1,39 @@
+package chap20_lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import chap20_lambda.clazz.UserCharString;
+
+public class lamdaEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<UserCharString> cusList = new ArrayList <UserCharString>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 0; i < 10; i++) {
+		System.out.println("문자를 입력하세요");
+		String str = sc.next();
+		cusList.add(new UserCharString(str));
+		}
+		
+		System.out.println("찾을 문자를 입력하세요");
+		char findCh = sc.nextLine().charAt(0);
+		
+		sc.close();
+		
+		//사용자가 입력한 ch가 없으면 "", 있으면 문자열 그대로 str에 저장
+//		cusList.stream().filter(ch -> ch.equals(' ') ? ch.equals(null) : ch)
+//							.forEach(ch -> System.out.println(ch));
+		
+		
+		
+		
+		
+	}
+
+}

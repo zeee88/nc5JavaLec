@@ -1,0 +1,8 @@
+package chap20_lambda.clazz;
+
+@FunctionalInterface
+public interface EngChar {
+
+	void findUserChar(String str);
+	
+}

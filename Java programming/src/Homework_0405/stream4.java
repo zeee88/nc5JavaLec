@@ -11,26 +11,29 @@ public class stream4 {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		char [] input = sc.nextLine().toCharArray();
 		
 		List<Character> charList = new ArrayList <Character>();
 		
-		for(int i = 0; i < input.length; i++) {
-			charList.add(input[i]);
+		for(int i = 0; i < 10; i++) {
+			System.out.println("영문자 하나를 입력하세요");
+			charList.add(sc.next().charAt(0));		//입력값을 저장하고 char형태로 받기
 		}
+		sc.close();
+		
+		
+		charList.stream().map(ch -> //Character타입의 대문자니?		//소문자로 바꿔					//대문자로 바꿔
+							Character.isUpperCase(ch) ? Character.toLowerCase(ch) :  Character.toUpperCase(ch))
+							.forEach(ch -> System.out.println(ch));
 		
 		
 		
-		Stream <Character> chStream = charList.stream();
-		Stream <Character> mapStream = chStream.map(m -> {
-										Character.toUpperCase() ? m.tolowerCase(m) :  m.toUpperCase(m) ;
-														return m;		
-														});
-		mapStream.forEach(m -> System.out.println(m));
 		
-		//forEach는 return값 없기 때문에 Stream <Character> 없이 바로 사용.
-		
+		//forEach는 void형태로 return값 없기 때문에 Stream<...> 없이 바로 사용해야 함.
 
+		
+		
+		
+		
 		
 		
 		

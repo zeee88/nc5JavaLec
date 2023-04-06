@@ -7,12 +7,11 @@ public class Student {
 	private int score;
 	private String grade;
 	
-	//생성자
-	public Student(int sno, String sName, int score, String grade) {
+	//생성자. 클래스명과 이름이 같아야 함. 리턴타입은 없어야 함.
+	public Student(int sno, String sName, int score) {
 		this.sno = sno;
 		this.sName = sName;
 		this.score = score;
-		this.grade = grade;
 	}
 
 
@@ -57,7 +56,7 @@ public class Student {
 	}
 	
 	
-	@Override
+	@Override			//<shift + alt + s>로 toString추가
 	public String toString() {
 		return "Student [sno=" + sno + ", sName=" + sName + ", score=" + score + ", grade=" + grade + "]";
 	}

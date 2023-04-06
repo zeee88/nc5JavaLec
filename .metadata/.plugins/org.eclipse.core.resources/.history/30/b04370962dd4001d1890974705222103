@@ -1,0 +1,33 @@
+package chap20_lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import chap20_lambda.clazz.UserCharString;
+
+public class lamdaEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<UserCharString> cusList = new ArrayList <UserCharString>();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 0; i < 10; i++) {
+		System.out.println("문자를 입력하세요");
+		cusList.add(new UserCharString(sc.nextLine()));
+		}
+		
+		sc.close();
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
