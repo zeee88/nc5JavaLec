@@ -51,10 +51,10 @@ public class HistoricPerson {
 //    2번에서 만든 List를 스트림으로 변환하고 사용자가 입력한 국가의 인물들만 모은 스트림으로 만들어서 출력하세요. 
 	
 	public HistoricPerson getSameCountryPerson(String country) {
-		if(country.equals(this.country)) {
-			return new HistoricPerson(this.name, this.achievement, this.country);
-		}else
-			return new HistoricPerson("", "", "");
+//		if(country.equals(this.country)) {
+			return new HistoricPerson(this.name, this.country, this.achievement);
+//		}else
+//			return new HistoricPerson("", "", "");
 		
 	}
 	

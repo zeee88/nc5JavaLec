@@ -10,7 +10,7 @@ public class Card {
 	private String cardName;
 	private int validYear;
 	
-	//기본생성자. 객체마다 다른 갯수의 매개변수가가 필요할 때 생성. 그 외에는 생성 안해도 됨.
+	
 	public Card() {
 		
 	}

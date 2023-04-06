@@ -70,7 +70,7 @@ public class stream2 {
 		
 		hisList.stream().map(a -> a.getSameCountryPerson(str))
 						.filter(a -> !a.getCountry().equals(""))
-						.forEach(a -> System.out.println(a.getName()));
+						.forEach(a -> System.out.println(a));
 		
 		
 		

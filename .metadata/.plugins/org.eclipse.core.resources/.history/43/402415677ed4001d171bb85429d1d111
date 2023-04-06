@@ -52,7 +52,7 @@ public class HistoricPerson {
 	
 	public HistoricPerson getSameCountryPerson(String country) {
 		if(country.equals(this.country)) {
-			return new HistoricPerson(this.name, this.achievement, this.country);
+			return new HistoricPerson(this.name, "", "");
 		}else
 			return new HistoricPerson("", "", "");
 		

@@ -52,7 +52,7 @@ public class HistoricPerson {
 	
 	public HistoricPerson getSameCountryPerson(String country) {
 		if(country.equals(this.country)) {
-			return new HistoricPerson(this.name, this.achievement, this.country);
+			return new HistoricPerson(this.name, "", "");
 		}else
 			return new HistoricPerson("", "", "");
 		
@@ -61,7 +61,7 @@ public class HistoricPerson {
 	
 	
 //	클래스 안에 있는 모든 정보를 다 출력하려면 타입을 클래스명으로 설정
-	
+	/*
 	public HistoricPerson getPersonInfo(String achievement) {
 		if(achievement.equals(this.achievement)) {
 			return new HistoricPerson(this.name, this.achievement, this.country);
@@ -69,14 +69,13 @@ public class HistoricPerson {
 			return new HistoricPerson("","","");
 		
 	}
-	/*
+	*/
 	public boolean getPersonInfo(String achievement) {
 		if(achievement.equals(this.achievement)) {
 			return true;
 		}else
 			return false;
 	}
-	*/
 	
 	
 	
