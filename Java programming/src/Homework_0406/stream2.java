@@ -29,24 +29,22 @@ public class stream2 {
 		hisList.add(new HistoricPerson("제갈공명", "책략가", "촉"));
 		
 		
-		
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("인물의 업적을 입력하세요");
-//		String ar = sc.next();
-//		
-//		hisList.stream().map(a -> a.getPersonInfo(ar))		//sc.next() 바로 쓸 수 없음. 입력을 계속 받을 필요 없음
+//		String input = sc.next();
+		//방법1
+//		hisList.stream().map(a -> a.getPersonInfo(input))		//sc.next() 바로 쓸 수 없음. 입력을 계속 받을 필요 없음
 //				.filter(a -> !a.getName().equals(""))
 //						.forEach(a -> System.out.println(a));
 		
+		//방법1-1
+//		hisList.stream().map(a -> a.getPerInfo(input))
+//						.forEach(a -> {
+//							if(a != null) {
+//								System.out.println(a);
+//							}
+//						});
 		
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("인물의 업적을 입력하세요");
-//		String ar = sc.next();
-//		
-//		hisList.stream().map(a -> a.getPersonInfo(ar))
-//						.filter(a -> !a.getAchievement().equals(""))
-//						.forEach(a -> System.out.println(a));
-//				//	==	.forEach(System.out::println)
 		
 		
 		
@@ -68,8 +66,9 @@ public class stream2 {
 		System.out.println("인물의 국가를 입력하세요");
 		String str = sc.next();
 		
-		hisList.stream().map(a -> a.getSameCountryPerson(str))
-						.filter(a -> !a.getCountry().equals(""))
+		//메소드가 boolean일 때는 map사용 x. boolean을 통해 true로 나온 결과만
+		//filter에서 걸러져서 forEach로 출력됨.
+		hisList.stream().filter(a -> a.getSameCountryPerson(str))
 						.forEach(a -> System.out.println(a.getName()));
 		
 		
@@ -77,8 +76,30 @@ public class stream2 {
 //		5. 2번에서 만든 List를 스트림으로 변환하고 성이 두자 이상인 인물의 정보를 스트림으로 만들어서 출력하세요.(을지문덕, 제갈공명)
 		
 		
+		
+		
+		
+		//방법1
 //		hisList.stream().filter(a -> a.getName().length() >= 4)
 //						.forEach(a -> System.out.println(a));
+
+		
+		
+		
+		//방법2
+//		String[] firstName = {"제갈", "을지", "독고", "황보", "남궁", "동방", "선우"};
+//		
+//		hisList.stream().filter(a ->{
+//						for(String fName : firstName) {
+//							if(a.getName().contains(fName)) {
+//							return true;
+//							}
+//						}
+//						return false;
+//						})
+//						.forEach(a -> System.out.println(a));
+		
+		
 		
 	}
 

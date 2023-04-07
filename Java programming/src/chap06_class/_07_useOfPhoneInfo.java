@@ -21,7 +21,10 @@ public class _07_useOfPhoneInfo {
 			System.out.println("1. 정보 입력");
 			System.out.println("2. 모든 정보 출력");
 			System.out.println("3. 인덱스로 정보 검색");
-			System.out.println("4. 종료");
+			System.out.println("4. 저장");
+			System.out.println("5. 종료");
+			//5번에 저장 만들어야 함
+			
 			
 			//nextInt는 enter 값을 처리하지 못하기 때문에
 			//숫자 입력 후 엔터를 누르면 엔터값이 남아있다.
@@ -55,8 +58,15 @@ public class _07_useOfPhoneInfo {
 					}
 					break;
 				case 4:
+					//입력한 것 저장하는 메소드 구현
+					
+					
+					
+					
+				case 5:
 					isExit = true;
 					break;
+					
 				default:
 					System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
 					continue;

@@ -1,5 +1,12 @@
 package chap06_class.phone;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
 public class PhoneInfo {
 	//이름 100개와 전화번호 100개를 담을수 있는 배열 2개(String)
 	String[] name = new String[100];
@@ -7,6 +14,8 @@ public class PhoneInfo {
 	
 	//배열의 현재 인덱스를 담고 있을 변수
 	int currentIndex = 0;
+
+	
 	
 	public PhoneInfo() {
 		String[] names = {"홍길동", "장동건", "원빈"};
@@ -24,6 +33,9 @@ public class PhoneInfo {
 		this.name[currentIndex] = name;
 		this.phoneNum[currentIndex] = PhoneNum;
 		currentIndex++;
+		
+		
+		
 	}
 	
 	
@@ -51,4 +63,45 @@ public class PhoneInfo {
 					", 전화번호 : " + phoneNum[index - 1]);
 		}
 	}
+	
+	
+	public static void write(String Name, String Num) {
+	
+		
+		Name += Name + "\n";
+		Num += Num + "\n";
+		
+		
+		write(Name, Num);
+		System.out.println(Name);
+		System.out.println(Num);
+		
+		
+		try {
+			OutputStream os = new FileOutputStream("C:/java/pho.txt", true);
+							//true가 없으면 입력한 값 중 마지막 값만 저장됨. true를 붙여야 입력한 데이터 모두 저장됨
+			Writer writer = new OutputStreamWriter(os, "UTF-8");
+			
+			writer.write(Name);	
+			writer.write(Num);	
+			
+			writer.flush();
+			writer.close();
+			
+			
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException ioe) {
+				System.out.println(ioe.getMessage());
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			
+		}
+	
+	
+	
+	
+	
 }

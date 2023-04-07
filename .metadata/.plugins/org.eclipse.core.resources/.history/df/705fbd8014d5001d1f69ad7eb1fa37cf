@@ -1,0 +1,10 @@
+package chap22_IO;
+
+public class _07_readerReadMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

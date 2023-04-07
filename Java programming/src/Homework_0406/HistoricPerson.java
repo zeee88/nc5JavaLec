@@ -50,33 +50,46 @@ public class HistoricPerson {
 //	4. HistoricPerson에 getSameCountryPerson(String country)를 만들고
 //    2번에서 만든 List를 스트림으로 변환하고 사용자가 입력한 국가의 인물들만 모은 스트림으로 만들어서 출력하세요. 
 	
-	public HistoricPerson getSameCountryPerson(String country) {
-		if(country.equals(this.country)) {
-			return new HistoricPerson(this.name, this.achievement, this.country);
-		}else
-			return new HistoricPerson("", "", "");
+	public boolean getSameCountryPerson(String country) {
+		if(this.getCountry().equals(country)) {
+			return true;
+		}
 		
+		return false;
 	}
 	
 	
 	
 //	클래스 안에 있는 모든 정보를 다 출력하려면 타입을 클래스명으로 설정
 	
-	public HistoricPerson getPersonInfo(String achievement) {
-		if(achievement.equals(this.achievement)) {
-			return new HistoricPerson(this.name, this.achievement, this.country);
-		}else
-			return new HistoricPerson("","","");
-		
-	}
-	/*
-	public boolean getPersonInfo(String achievement) {
-		if(achievement.equals(this.achievement)) {
-			return true;
-		}else
-			return false;
-	}
-	*/
+	
+	//방법1
+//	public HistoricPerson getPersonInfo(String achievement) {
+//		if(achievement.equals(this.achievement)) {
+//			return new HistoricPerson(this.name, this.achievement, this.country);
+//		}else
+//			return new HistoricPerson("","","");
+//		
+//	}
+	
+	//방법 1-1
+//	public HistoricPerson getPerInfo(String achievement) {
+//				if(this.achievement.equals(achievement)) {
+//					return this;
+//				}
+//				return null;
+//	}
+	
+	
+	
+	//방법2
+//	public boolean getPersonInfo(String achievement) {
+//		if(achievement.equals(this.achievement)) {
+//			return true;
+//		}else
+//			return false;
+//	}
+	
 	
 	
 	
