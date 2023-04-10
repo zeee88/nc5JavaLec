@@ -1,0 +1,42 @@
+package etc;
+
+class Mypoint{
+	int x;
+	int y;
+	
+	Mypoint(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+
+	public String toString() {    //Object클래스의 toString()을 오버라이딩
+		return "x: " + x + "Y: " + y;
+	}
+}
+
+class Mypoint3D extends Mypoint{
+	int z;
+	
+	//부모의 getLocation()을 오버라이딩
+	String getLocation() {
+		return " x:" + x + " Y:" + y + " z:" + z;
+	}
+}
+
+
+public class overriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Mypoint3D p = new Mypoint3D();
+		
+		p.z = 7;
+		System.out.println(p.toString());
+		System.out.println(p.getLocation());   //자식의 getLocation() 메소드 출력	
+		
+		
+		
+		
+	}
+
+}

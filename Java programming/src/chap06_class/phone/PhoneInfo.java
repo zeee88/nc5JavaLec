@@ -12,20 +12,10 @@ public class PhoneInfo {
 	String[] name = new String[100];
 	String[] phoneNum = new String[100];
 	
-	//배열의 현재 인덱스를 담고 있을 변수
-	int currentIndex = 0;
 
-	
-	
-	public PhoneInfo() {
-		String[] names = {"홍길동", "장동건", "원빈"};
-		String[] phoneNums = {"1111", "2222", "3333"};
-		
-		System.arraycopy(names, 0, name, 0, names.length);
-		System.arraycopy(phoneNums, 0, phoneNum, 0, phoneNums.length);
-		
-		currentIndex = names.length;
-	}
+	//배열의 현재 인덱스를 담고 있을 변수
+	int currentIndex = 0;  
+
 	
 	//전달받은 이름과 전화번호를 저장하는 메소드
 	//insertPhoneNum
@@ -33,8 +23,6 @@ public class PhoneInfo {
 		this.name[currentIndex] = name;
 		this.phoneNum[currentIndex] = PhoneNum;
 		currentIndex++;
-		
-		
 		
 	}
 	
@@ -65,28 +53,30 @@ public class PhoneInfo {
 	}
 	
 	
-	public static void write(String Name, String Num) {
+	public void write() {
 	
-		
-		Name += Name + "\n";
-		Num += Num + "\n";
-		
-		
-		write(Name, Num);
-		System.out.println(Name);
-		System.out.println(Num);
-		
-		
 		try {
-			OutputStream os = new FileOutputStream("C:/java/pho.txt", true);
+			OutputStream os1 = new FileOutputStream("C:/java/name.txt", true);    //append와 비슷
+			OutputStream os2 = new FileOutputStream("C:/java/phoneNum.txt", true);
 							//true가 없으면 입력한 값 중 마지막 값만 저장됨. true를 붙여야 입력한 데이터 모두 저장됨
-			Writer writer = new OutputStreamWriter(os, "UTF-8");
+			Writer writer1 = new OutputStreamWriter(os1, "UTF-8");
+			Writer writer2 = new OutputStreamWriter(os2, "UTF-8");
 			
-			writer.write(Name);	
-			writer.write(Num);	
+			for(int i = 0; i < currentIndex; i++) {
 			
-			writer.flush();
-			writer.close();
+//			String str = "이름: " + this.name[i] + "\n";
+//			String str1 = "번호: " + this.phoneNum[i] + "\n";
+			
+				//String으로 받지 않고 바로 write에 사용 가능.
+			writer1.write("이름: " + this.name[i] + "\n");		 //PhoneInfo에서 String배열로 받았으므로 배열 형태로
+			writer2.write("번호: " + this.phoneNum[i] + "\n");	 //static이 붙으면 this를 쓸 수 없음
+			}
+			
+			writer1.flush();
+			writer1.close();
+
+			writer2.flush();
+			writer2.close();
 			
 			
 			} catch (FileNotFoundException e) {
@@ -100,6 +90,8 @@ public class PhoneInfo {
 			
 		}
 	
+	
+	//read 메소드도 사용하기
 	
 	
 	

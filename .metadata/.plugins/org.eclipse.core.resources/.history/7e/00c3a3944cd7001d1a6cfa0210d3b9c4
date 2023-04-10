@@ -1,0 +1,26 @@
+package chap22_IO;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+public class _12_printStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			PrintStream ps = new PrintStream(new FileOutputStream("C:/java/printStream"));
+		
+		}catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}  catch(IOException ioe) {
+			System.out.println(ioe.toString());
+		} catch(Exception e) {
+			System.out.println(e.toString());
+		}
+	}
+
+}

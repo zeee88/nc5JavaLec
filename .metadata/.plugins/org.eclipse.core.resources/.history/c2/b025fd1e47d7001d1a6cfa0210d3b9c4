@@ -1,0 +1,31 @@
+package chap22_IO;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class _11_dataInputOutputStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			DataOutputStream dos = new DataOutputStream(new FileOutputStream("C:/java/Car.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+	} catch(FileNotFoundException fnfe) {
+		System.out.println("파일이 존재하지 않습니다.");
+		System.out.println("정보를 입력하고 저장해주세요.");
+	} catch(IOException ioe) {
+		System.out.println(ioe.toString());
+	} catch(Exception e) {
+		System.out.println(e.toString());
+	}
+		
+		
+	}
+
+}

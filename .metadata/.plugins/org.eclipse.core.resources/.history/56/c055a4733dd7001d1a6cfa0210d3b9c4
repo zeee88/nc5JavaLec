@@ -1,0 +1,32 @@
+package chap22_IO;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+public class _09_performanceOfBuffer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			Reader rd = new FileReader("C:/java, phone.txt");
+			//성능 향상 보조스트림을 연결
+			BufferedReader brd = new BufferedReader(rd);
+			
+		} catch (FileNotFoundException fnfe) {
+			// TODO Auto-generated catch block
+			fnfe.printStackTrace();
+		} catch(IOException ioe) {
+			System.out.println(ioe.getMessage());
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+	}
+
+}
