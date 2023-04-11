@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="chap19_multithread.clazz.PrintNumWithWaitNotify"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.whileThread"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.InterruptThread"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.AutoSaveThread"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.SumThread1"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
