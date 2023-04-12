@@ -1,7 +1,0 @@
-package chap20_lambda.clazz;
-
-@FunctionalInterface
-public interface CompareStr {
-
-	public boolean compateTwoStr(String a, String b);
-}

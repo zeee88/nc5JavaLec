@@ -1,242 +1,246 @@
---1)student Å×ÀÌºí ±¸Á¶¸¦ °Ë»öÇØ¶ó
+--1)student í…Œì´ë¸” êµ¬ì¡°ë¥¼ ê²€ìƒ‰í•´ë¼
 DESC STUDENT
 
---2)course Å×ÀÌºí ±¸Á¶¸¦ °Ë»öÇØ¶ó
+--2)course í…Œì´ë¸” êµ¬ì¡°ë¥¼ ê²€ìƒ‰í•´ë¼
 DESC COURSE
 
---3)professor Å×ÀÌºí ±¸Á¶¸¦ °Ë»öÇØ¶ó
+--3)professor í…Œì´ë¸” êµ¬ì¡°ë¥¼ ê²€ìƒ‰í•´ë¼
 DESC PROFESSOR
 
---4)score Å×ÀÌºí ±¸Á¶¸¦ °Ë»öÇØ¶ó
+--4)score í…Œì´ë¸” êµ¬ì¡°ë¥¼ ê²€ìƒ‰í•´ë¼
 DESC SCORE
 
---5) ¸ðµç ÇÐ»ýÀÇ Á¤º¸¸¦ °Ë»öÇØ¶ó
+--5) ëª¨ë“  í•™ìƒì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•´ë¼
 SELECT *
     FROM STUDENT;
 
---7) ¸ðµç °ú¸ñÀÇ Á¤º¸¸¦ °Ë»öÇØ¶ó
+--7) ëª¨ë“  ê³¼ëª©ì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•´ë¼
 SELECT *
     FROM course;
 
---8) ±â¸»°í»ç ½ÃÇèÁ¡¼ö¸¦ °Ë»öÇØ¶ó
+--8) ê¸°ë§ê³ ì‚¬ ì‹œí—˜ì ìˆ˜ë¥¼ ê²€ìƒ‰í•´ë¼
 SELECT RESULT
     FROM SCORE;
 
---9) ÇÐ»ýµéÀÇ ÇÐ°ú¿Í ÇÐ³âÀ» °Ë»öÇØ¶ó
+--9) í•™ìƒë“¤ì˜ í•™ê³¼ì™€ í•™ë…„ì„ ê²€ìƒ‰í•´ë¼
 SELECT MAJOR, SYEAR
     FROM STUDENT;
 
---10) °¢ °ú¸ñÀÇ ÀÌ¸§°ú ÇÐÁ¡À» °Ë»öÇØ¶ó
+--10) ê° ê³¼ëª©ì˜ ì´ë¦„ê³¼ í•™ì ì„ ê²€ìƒ‰í•´ë¼
 SELECT CNAME, ST_NUM
     FROM COURSE;
 
---11) ¸ðµç ±³¼öÀÇ Á÷À§¸¦ °Ë»öÇØ¶ó
+--11) ëª¨ë“  êµìˆ˜ì˜ ì§ìœ„ë¥¼ ê²€ìƒ‰í•´ë¼
 SELECT ORDERS
     FROM PROFESSOR;
     
 ---------------------------------------------------    
 
     
- --1) °¢ ÇÐ»ýÀÇ ÆòÁ¡À» °Ë»öÇÏ¶ó(º°ÄªÀ» »ç¿ë)
+ --1) ê° í•™ìƒì˜ í‰ì ì„ ê²€ìƒ‰í•˜ë¼(ë³„ì¹­ì„ ì‚¬ìš©)
 SELECT SNO  
-    ,AVR AS ÆòÁ¡
+    ,AVR AS í‰ì 
     FROM STUDENT;
 
---2) °¢ °ú¸ñÀÇ ÇÐÁ¡¼ö¸¦ °Ë»öÇÏ¶ó(º°ÄªÀ» »ç¿ë)
-SELECT ST_NUM AS ÇÐÁ¡
+--2) ê° ê³¼ëª©ì˜ í•™ì ìˆ˜ë¥¼ ê²€ìƒ‰í•˜ë¼(ë³„ì¹­ì„ ì‚¬ìš©)
+SELECT ST_NUM AS í•™ì 
     FROM COURSE;
 
---3) °¢ ±³¼öÀÇ ÁöÀ§¸¦ °Ë»öÇÏ¶ó(º°ÄªÀ» »ç¿ë)
-SELECT ORDERS AS Á÷À§
+--3) ê° êµìˆ˜ì˜ ì§€ìœ„ë¥¼ ê²€ìƒ‰í•˜ë¼(ë³„ì¹­ì„ ì‚¬ìš©)
+SELECT ORDERS AS ì§ìœ„
     FROM PROFESSOR;
 
---4) ±Þ¿©¸¦ 10%ÀÎ»óÇßÀ» ¶§ ¿¬°£ Áö±ÞµÇ´Â ±Þ¿©¸¦ °Ë»öÇÏ¶ó(º°ÄªÀ» »ç¿ë)
-SELECT SAL*1.1 AS ÀÎ»óµÈ±Þ¿©
+--4) ê¸‰ì—¬ë¥¼ 10%ì¸ìƒí–ˆì„ ë•Œ ì—°ê°„ ì§€ê¸‰ë˜ëŠ” ê¸‰ì—¬ë¥¼ ê²€ìƒ‰í•˜ë¼(ë³„ì¹­ì„ ì‚¬ìš©)
+SELECT SAL*1.1 AS ì¸ìƒëœê¸‰ì—¬
     FROM EMP;
     
---5) ÇöÀç ÇÐ»ýÀÇ Æò±Õ ÆòÁ¡Àº 4.0¸¸Á¡ÀÌ´Ù. ÀÌ¸¦ 4.5¸¸Á¡À¸·Î È¯»êÇØ¼­ °Ë»öÇÏ¶ó(º°ÄªÀ» »ç¿ë)
-SELECT AVR*(4.0/4.5) AS È¯»êÇÐÁ¡
+--5) í˜„ìž¬ í•™ìƒì˜ í‰ê·  í‰ì ì€ 4.0ë§Œì ì´ë‹¤. ì´ë¥¼ 4.5ë§Œì ìœ¼ë¡œ í™˜ì‚°í•´ì„œ ê²€ìƒ‰í•˜ë¼(ë³„ì¹­ì„ ì‚¬ìš©)
+SELECT 
+    ROUND (AVR*(4.0/4.5),2) AS í™˜ì‚°í•™ì 
     FROM STUDENT;
    
   -------------------------------------------------------
   
---1) '__ÇÐ°úÀÎ __ÇÐ»ýÀÇ ÇöÀç ÆòÁ¡Àº __ÀÔ´Ï´Ù' ÇüÅÂ·Î ÇÐ»ýÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ¶ó
+--1) '__í•™ê³¼ì¸ __í•™ìƒì˜ í˜„ìž¬ í‰ì ì€ __ìž…ë‹ˆë‹¤' í˜•íƒœë¡œ í•™ìƒì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ë¼
 
-SELECT MAJOR
-      , SNAME
-      , AVR
+SELECT MAJOR || 'í•™ê³¼ì¸ ' ||
+       SNAME ||'í•™ìƒì˜ í˜„ìž¬ í‰ì ì€ ' ||
+       AVR
     FROM STUDENT;
 
---2) '__°ú¸ñÀº __ÇÐÁ¡ °ú¸ñÀÔ´Ï´Ù.' ÇüÅÂ·Î °ú¸ñÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ¶ó
+--2) '__ê³¼ëª©ì€ __í•™ì  ê³¼ëª©ìž…ë‹ˆë‹¤.' í˜•íƒœë¡œ ê³¼ëª©ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ë¼
 SELECT CNAME
     , ST_NUM
     FROM COURSE;
 
---3) '__±³¼ö´Â __ÇÐ°ú ¼Ò¼ÓÀÔ´Ï´Ù.' ÇüÅÂ·Î ±³¼öÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏ¶ó
+--3) '__êµìˆ˜ëŠ” __í•™ê³¼ ì†Œì†ìž…ë‹ˆë‹¤.' í˜•íƒœë¡œ êµìˆ˜ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ë¼
 SELECT PNAME
     , SECTION
     FROM PROFESSOR;
 
---4) ÇÐ±³¿¡´Â ¾î¶² ÇÐ°ú°¡ ÀÖ´ÂÁö °Ë»öÇÑ´Ù(ÇÐ»ý Å×ÀÌºí ±â¹ÝÀ¸·Î °Ë»öÇÑ´Ù)
+--4) í•™êµì—ëŠ” ì–´ë–¤ í•™ê³¼ê°€ ìžˆëŠ”ì§€ ê²€ìƒ‰í•œë‹¤(í•™ìƒ í…Œì´ë¸” ê¸°ë°˜ìœ¼ë¡œ ê²€ìƒ‰í•œë‹¤)
 SELECT DISTINCT MAJOR
     FROM STUDENT;
 
---5) ÇÐ±³¿¡´Â ¾î¶² ÇÐ°ú°¡ ÀÖ´ÂÁö °Ë»öÇÑ´Ù(±³¼ö Å×ÀÌºí ±â¹ÝÀ¸·Î °Ë»öÇÑ´Ù)
+--5) í•™êµì—ëŠ” ì–´ë–¤ í•™ê³¼ê°€ ìžˆëŠ”ì§€ ê²€ìƒ‰í•œë‹¤(êµìˆ˜ í…Œì´ë¸” ê¸°ë°˜ìœ¼ë¡œ ê²€ìƒ‰í•œë‹¤)
 SELECT DISTINCT SECTION
     FROM PROFESSOR;
 
---6) ±³¼öÀÇ ÁöÀ§´Â ¾î¶² °ÍµéÀÌ ÀÖ´ÂÁö °Ë»öÇÑ´Ù
+--6) êµìˆ˜ì˜ ì§€ìœ„ëŠ” ì–´ë–¤ ê²ƒë“¤ì´ ìžˆëŠ”ì§€ ê²€ìƒ‰í•œë‹¤
 SELECT DISTINCT ORDERS
     FROM PROFESSOR;
 
 ------------------------------------------------
 
---1) ¼ºÀû¼øÀ¸·Î ÇÐ»ýÀÇ ÀÌ¸§À» °Ë»öÇÏ¶ó
+--1) ì„±ì ìˆœìœ¼ë¡œ í•™ìƒì˜ ì´ë¦„ì„ ê²€ìƒ‰í•˜ë¼
 SELECT SNAME
     FROM STUDENT
     ORDER BY AVR DESC;
 
---2) ÇÐ°úº° ¼ºÀû¼øÀ¸·Î ÇÐ»ýÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--2) í•™ê³¼ë³„ ì„±ì ìˆœìœ¼ë¡œ í•™ìƒì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
     ORDER BY AVR DESC;
 
---3) ÇÐ³âº° ¼ºÀû¼øÀ¸·Î ÇÐ»ýÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--3) í•™ë…„ë³„ ì„±ì ìˆœìœ¼ë¡œ í•™ìƒì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
     ORDER BY SYEAR, AVR;
 
---4) ÇÐ°úº° ÇÐ³âº°·Î ÇÐ»ýÀÇ Á¤º¸¸¦ ¼ºÀû¼ø(¼ºÀûÀÌ ³ôÀº ¼ø)À¸·Î °Ë»öÇÏ¶ó
+--4) í•™ê³¼ë³„ í•™ë…„ë³„ë¡œ í•™ìƒì˜ ì •ë³´ë¥¼ ì„±ì ìˆœ(ì„±ì ì´ ë†’ì€ ìˆœ)ìœ¼ë¡œ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
     ORDER BY MAJOR, SYEAR, AVR DESC;
 
---5) ÇÐÁ¡¼øÀ¸·Î °ú¸ñ ÀÌ¸§À» °Ë»öÇÏ¶ó
+--5) í•™ì ìˆœìœ¼ë¡œ ê³¼ëª© ì´ë¦„ì„ ê²€ìƒ‰í•˜ë¼
 SELECT CNAME
     ,ST_NUM
     FROM COURSE
     ORDER BY ST_NUM;
 
---6) °¢ ÇÐ°úº°·Î ±³¼öÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--6) ê° í•™ê³¼ë³„ë¡œ êµìˆ˜ì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM PROFESSOR
     ORDER BY SECTION;
 
---7) ÁöÀ§º°·Î ±³¼öÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--7) ì§€ìœ„ë³„ë¡œ êµìˆ˜ì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM PROFESSOR
     ORDER BY ORDERS;
---8) °¢ ÇÐ°úº°·Î ±³¼öÀÇ Á¤º¸¸¦ ºÎÀÓÀÏÀÚ(¿À·¡µÈ ¼ø) ¼øÀ¸·Î °Ë»öÇÏ¶ó
+--8) ê° í•™ê³¼ë³„ë¡œ êµìˆ˜ì˜ ì •ë³´ë¥¼ ë¶€ìž„ì¼ìž(ì˜¤ëž˜ëœ ìˆœ) ìˆœìœ¼ë¡œ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM PROFESSOR
     ORDER BY SECTION, HIREDATE; 
 -----------------------------------------------------------
 
---1) È­ÇÐ°ú ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--1) í™”í•™ê³¼ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT*
     FROM STUDENT
-    WHERE MAJOR = 'È­ÇÐ';
+    WHERE MAJOR = 'í™”í•™';
 
---2) ÆòÁ¡ÀÌ 2.0 ¹Ì¸¸ÀÎ ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--2) í‰ì ì´ 2.0 ë¯¸ë§Œì¸ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
     WHERE AVR < 2.0;
 
---3) °ü¿ì ÇÐ»ýÀÇ ÆòÁ¡À» °Ë»öÇÏ¶ó
+--3) ê´€ìš° í•™ìƒì˜ í‰ì ì„ ê²€ìƒ‰í•˜ë¼
 SELECT SNAME
     , AVR
     FROM STUDENT
-    WHERE SNAME LIKE '%°ü¿ì%';
+    WHERE SNAME LIKE '%ê´€ìš°%';
 
---4) Á¤±³¼ö ¸í´ÜÀ» °Ë»öÇÏ¶ó
+--4) ì •êµìˆ˜ ëª…ë‹¨ì„ ê²€ìƒ‰í•˜ë¼
 SELECT PNAME
     FROM PROFESSOR
-    WHERE ORDERS = 'Á¤±³¼ö';
+    WHERE ORDERS = 'ì •êµìˆ˜';
 
---5) È­ÇÐ°ú ¼Ò¼Ó ±³¼öÀÇ ¸í´ÜÀ» °Ë»öÇÏ¶ó
+--5) í™”í•™ê³¼ ì†Œì† êµìˆ˜ì˜ ëª…ë‹¨ì„ ê²€ìƒ‰í•˜ë¼
 SELECT PNAME
     FROM PROFESSOR
-    WHERE SECTION = 'È­ÇÐ';
+    WHERE SECTION = 'í™”í•™';
 
---6) ¼Û°­ ±³¼öÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--6) ì†¡ê°• êµìˆ˜ì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM PROFESSOR
-    WHERE PNAME LIKE '%¼Û°­%';
+    WHERE PNAME LIKE '%ì†¡ê°•%';
 
---7) ÇÐ³âº°·Î È­ÇÐ°ú ÇÐ»ýÀÇ ¼ºÀûÀ» °Ë»öÇÏ¶ó
+--7) í•™ë…„ë³„ë¡œ í™”í•™ê³¼ í•™ìƒì˜ ì„±ì ì„ ê²€ìƒ‰í•˜ë¼
 SELECT SNAME
     ,SYEAR
     ,MAJOR
     ,AVR
     FROM STUDENT
-    WHERE MAJOR = 'È­ÇÐ'
+    WHERE MAJOR = 'í™”í•™'
     ORDER BY SYEAR;
 
---8) 2000³â ÀÌÀü¿¡ ºÎÀÓÇÑ ±³¼öÀÇ Á¤º¸¸¦ ºÎÀÓÀÏ¼øÀ¸·Î °Ë»öÇÏ¶ó
+--8) 2000ë…„ ì´ì „ì— ë¶€ìž„í•œ êµìˆ˜ì˜ ì •ë³´ë¥¼ ë¶€ìž„ì¼ìˆœìœ¼ë¡œ ê²€ìƒ‰í•˜ë¼
+SELECT *
+    FROM PROFESSOR
+    WHERE HIREDATE < TO_DATE('20000101', 'YYYYMMDD')
+    ORDER BY HIREDATE;
 
-
-
-
---9) ´ã´ç ±³¼ö°¡ ¾ø´Â °ú¸ñÀÇ Á¤º¸¸¦ °Ë»öÇÏ¶ó
+--9) ë‹´ë‹¹ êµìˆ˜ê°€ ì—†ëŠ” ê³¼ëª©ì˜ ì •ë³´ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM COURSE
     WHERE PNO IS NULL;
     
-
-
 ---------------------------------------------------------------
 
---1) À¯°ø°ú¿Í »ý¹°°ú, ½Ä¿µ°ú ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--1) ìœ ê³µê³¼ì™€ ìƒë¬¼ê³¼, ì‹ì˜ê³¼ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
-    WHERE MAJOR = 'À¯°ø'
-     OR MAJOR = '»ý¹°'
-     OR MAJOR = '½Ä¿µ';
+    WHERE MAJOR = 'ìœ ê³µ'
+     OR MAJOR = 'ìƒë¬¼'
+     OR MAJOR = 'ì‹ì˜';
        
---2) È­ÇÐ°ú°¡ ¾Æ´Ñ ÇÐ»ýÁß¿¡ 1ÇÐ³â ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--2) í™”í•™ê³¼ê°€ ì•„ë‹Œ í•™ìƒì¤‘ì— 1í•™ë…„ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
-    WHERE MAJOR != 'È­ÇÐ'
+    WHERE MAJOR != 'í™”í•™'
         AND SYEAR = 1;
 
---3) ¹°¸®ÇÐ°ú 3ÇÐ³â ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--3) ë¬¼ë¦¬í•™ê³¼ 3í•™ë…„ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
-    WHERE MAJOR = '¹°¸®'
+    WHERE MAJOR = 'ë¬¼ë¦¬'
         AND SYEAR = 3;
 
---4) ÇÐÁ¡ÀÌ 2.0¿¡¼­ 3.0»çÀÌÀÎ ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--4) í•™ì ì´ 2.0ì—ì„œ 3.0ì‚¬ì´ì¸ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
     WHERE AVR >= 2.0
         AND AVR <= 3.0;
 
---5) ±³¼ö°¡ ÁöÁ¤µÇÁö ¾ÊÀº °ú¸ñÁß¿¡ ÇÐÁ¡ÀÌ 3ÇÐÁ¡ÀÎ °ú¸ñÀ» °Ë»öÇÏ¶ó
+SELECT *
+    FROM STUDENT
+    WHERE AVR BETWEEN 2.0 AND 3.0;
+
+--5) êµìˆ˜ê°€ ì§€ì •ë˜ì§€ ì•Šì€ ê³¼ëª©ì¤‘ì— í•™ì ì´ 3í•™ì ì¸ ê³¼ëª©ì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM COURSE
     WHERE PNO IS NULL
         AND ST_NUM = 3;
 
---6) È­ÇÐ°ú °ü·ÃµÈ °ú¸ñÁß ÇÐÁ¡ÀÌ 2ÇÐÁ¡ ÀÌÇÏÀÎ °ú¸ñÀ» °Ë»öÇÏ¶ó
+--6) í™”í•™ê³¼ ê´€ë ¨ëœ ê³¼ëª©ì¤‘ í•™ì ì´ 2í•™ì  ì´í•˜ì¸ ê³¼ëª©ì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM COURSE
-    WHERE CNAME LIKE '%È­ÇÐ%'
+    WHERE CNAME LIKE '%í™”í•™%'
         AND ST_NUM <= 2;
 
---7) È­ÇÐ°ú Á¤±³¼ö¸¦ °Ë»öÇÏ¶ó
+--7) í™”í•™ê³¼ ì •êµìˆ˜ë¥¼ ê²€ìƒ‰í•˜ë¼
 
 SELECT *
     FROM PROFESSOR
-    WHERE ORDERS = 'Á¤±³¼ö'
-        AND SECTION = 'È­ÇÐ';
+    WHERE ORDERS = 'ì •êµìˆ˜'
+        AND SECTION = 'í™”í•™';
 
---8) ¹°¸®ÇÐ°ú ÇÐ»ýÁß¿¡ ¼ºÀÌ »ç¸¶¾¾ÀÎ ÇÐ»ýÀ» °Ë»öÇÏ¶ó
+--8) ë¬¼ë¦¬í•™ê³¼ í•™ìƒì¤‘ì— ì„±ì´ ì‚¬ë§ˆì”¨ì¸ í•™ìƒì„ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM STUDENT
-    WHERE MAJOR = '¹°¸®'
-        AND SNAME LIKE '»ç¸¶%';
+    WHERE MAJOR = 'ë¬¼ë¦¬'
+        AND SNAME LIKE 'ì‚¬ë§ˆ%';
 
---9) ¼º°ú ÀÌ¸§ÀÌ °¢°¢ 1±ÛÀÚÀÎ ±³¼ö¸¦ °Ë»öÇÏ¶ó
+--9) ì„±ê³¼ ì´ë¦„ì´ ê°ê° 1ê¸€ìžì¸ êµìˆ˜ë¥¼ ê²€ìƒ‰í•˜ë¼
 SELECT *
     FROM PROFESSOR
     WHERE PNAME LIKE '__';

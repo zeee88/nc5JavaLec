@@ -1,9 +1,0 @@
-package Homework_0404;
-
-
-@FunctionalInterface
-public interface combineStrBuilder {
-
-	void combineStr(StringBuilder a, StringBuilder b);
-	
-}

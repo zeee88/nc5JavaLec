@@ -1,109 +1,109 @@
---1. Å×ÀÌºí ±¸Á¶ È®ÀÎ ¸í·É(DESC)
+--1. í…Œì´ë¸” êµ¬ì¡° í™•ì¸ ëª…ë ¹(DESC)
 DESC STUDENT;
 
---2. µ¥ÀÌÅÍ¸¦ Á¶È¸ÇÏ´Â ±âº» Select±¸¹®
+--2. ë°ì´í„°ë¥¼ ì¡°íšŒí•˜ëŠ” ê¸°ë³¸ Selectêµ¬ë¬¸
 SELECT SNO
     ,SNAME
     FROM STUDENT;
     
--- * Å×ÀÌºíÀÇ ¸ðµç ÄÃ·³À» Á¶È¸
+-- * í…Œì´ë¸”ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
     FROM STUDENT;
     
---3. Á¶È¸ÇÏ´Â ÄÃ·³°ú Å×ÀÌºí¿¡ º°Äª ºÙÀÌ±â
---3-1. ÄÃ·³¿¡ º°Äª ºÙÀÌ±â(°ÅÀÇ ¿µ¾î·Î º°ÄªÀ» ºÙÀÎ´Ù.)
-SELECT SNO AS ÇÐ»ý¹øÈ£
-        , SNAME AS ÇÐ»ýÀÌ¸§
+--3. ì¡°íšŒí•˜ëŠ” ì»¬ëŸ¼ê³¼ í…Œì´ë¸”ì— ë³„ì¹­ ë¶™ì´ê¸°
+--3-1. ì»¬ëŸ¼ì— ë³„ì¹­ ë¶™ì´ê¸°(ê±°ì˜ ì˜ì–´ë¡œ ë³„ì¹­ì„ ë¶™ì¸ë‹¤.)
+SELECT SNO AS í•™ìƒë²ˆí˜¸
+        , SNAME AS í•™ìƒì´ë¦„
         FROM STUDENT;
         
---3-2. Å×ÀÌºí¿¡ º°Äª ºÙÀÌ±â
---Å×ÀÌºí¿¡ ´ëÇÑ º°ÄªÀº ÇØ´ç Äõ¸®(SQL)¾È¿¡¼­ Å×ÀÌºíÀ» º°ÄªÀ¸·Î »ç¿ëÇÏ°Ú´Ù´Â ¶æÀÌ´Ù.
---µÎ °³ ÀÌ»ó Å×ÀÌºíÀ» »ç¿ëÇØ¼­ Á¶È¸ÇÒ ¶§ Áßº¹µÈ ÄÃ·³ÀÌ Á¸ÀçÇÏ¸é
---¾î¶² Å×ÀÌºí¿¡¼­ ÄÃ·³À» Á¶È¸ÇÒ Áö °áÁ¤ÇØ¾ß ÇÏ´Âµ¥ ±×·² ¶§ ÁÖ·Î Å×ÀÌºí¿¡ º°ÄªÀ» ºÙ¿©¼­
---¾Ö¸ÅÇÑ ÄÃ·³À» Á¶È¸ÇÒ Å×ÀÌºíÀ» ÁöÁ¤ÇÒ ¼ö ÀÖ´Ù.
+--3-2. í…Œì´ë¸”ì— ë³„ì¹­ ë¶™ì´ê¸°
+--í…Œì´ë¸”ì— ëŒ€í•œ ë³„ì¹­ì€ í•´ë‹¹ ì¿¼ë¦¬(SQL)ì•ˆì—ì„œ í…Œì´ë¸”ì„ ë³„ì¹­ìœ¼ë¡œ ì‚¬ìš©í•˜ê² ë‹¤ëŠ” ëœ»ì´ë‹¤.
+--ë‘ ê°œ ì´ìƒ í…Œì´ë¸”ì„ ì‚¬ìš©í•´ì„œ ì¡°íšŒí•  ë•Œ ì¤‘ë³µëœ ì»¬ëŸ¼ì´ ì¡´ìž¬í•˜ë©´
+--ì–´ë–¤ í…Œì´ë¸”ì—ì„œ ì»¬ëŸ¼ì„ ì¡°íšŒí•  ì§€ ê²°ì •í•´ì•¼ í•˜ëŠ”ë° ê·¸ëŸ´ ë•Œ ì£¼ë¡œ í…Œì´ë¸”ì— ë³„ì¹­ì„ ë¶™ì—¬ì„œ
+--ì• ë§¤í•œ ì»¬ëŸ¼ì„ ì¡°íšŒí•  í…Œì´ë¸”ì„ ì§€ì •í•  ìˆ˜ ìžˆë‹¤.
 
 SELECT ST.SNO
         , ST.SNAME
         , ST.SYEAR
     FROM STUDENT ST
-    WHERE ST.SNAME LIKE '%¿ì%';
+    WHERE ST.SNAME LIKE '%ìš°%';
     
---4. NULLÀ» Ã³¸®ÇØÁÖ´Â NVL
---4-1. NVLÀ» »ç¿ëÇÏÁö ¾Ê¾ÒÀ» °æ¿ì
+--4. NULLì„ ì²˜ë¦¬í•´ì£¼ëŠ” NVL
+--4-1. NVLì„ ì‚¬ìš©í•˜ì§€ ì•Šì•˜ì„ ê²½ìš°
 SELECT ENO
     , ENAME
     , SAL
     , COMM
     FROM EMP;
     
---4-2. NVL»ç¿ë
---ÀÚ¹Ù¿Í ¿¬µ¿ÇßÀ» ¶§ NULL°ªÀÌ ÀÚ¹Ù·Î ±×´ë·Î ³Ñ¾î°¡¸é
---NullPointerExceptionÀÌ ¹ß»ýÇÒ È®·üÀÌ ³ô¾ÆÁö±â ¶§¹®¿¡
---NULL°ªÀÌ ³ª¿Ã È®·üÀÌ ÀÖ´Â ÄÃ·³¿¡¼­´Â Ç×»ó NVLÃ³¸®¸¦ ÇØÁØ´Ù.
+--4-2. NVLì‚¬ìš©
+--ìžë°”ì™€ ì—°ë™í–ˆì„ ë•Œ NULLê°’ì´ ìžë°”ë¡œ ê·¸ëŒ€ë¡œ ë„˜ì–´ê°€ë©´
+--NullPointerExceptionì´ ë°œìƒí•  í™•ë¥ ì´ ë†’ì•„ì§€ê¸° ë•Œë¬¸ì—
+--NULLê°’ì´ ë‚˜ì˜¬ í™•ë¥ ì´ ìžˆëŠ” ì»¬ëŸ¼ì—ì„œëŠ” í•­ìƒ NVLì²˜ë¦¬ë¥¼ í•´ì¤€ë‹¤.
 SELECT ENO
     , ENAME
     , SAL
     , NVL(COMM, 0)
     FROM EMP;
 
---5. ¿¬°á¿¬»êÀÚ(||)
---5-1. »ç¿øÀÌ¸§ ±Þ¿© ¿¬°áÇØ¼­ Ãâ·Â(EMP)
+--5. ì—°ê²°ì—°ì‚°ìž(||)
+--5-1. ì‚¬ì›ì´ë¦„ ê¸‰ì—¬ ì—°ê²°í•´ì„œ ì¶œë ¥(EMP)
 SELECT ENO
     , ENAME || '-' || SAL
     FROM EMP;
---5-1. ÇÐ»ý¹øÈ£¶û - ±â¸»°í»ç ¼ºÀû(SCORE)
+--5-1. í•™ìƒë²ˆí˜¸ëž‘ - ê¸°ë§ê³ ì‚¬ ì„±ì (SCORE)
 SELECT SNO || '-' || RESULT
     FROM SCORE;
 
---5-2. ÇÐ»ý¹øÈ£ : ÇÐ»ýÀÌ¸§ ¿¬°áÇØ¼­ Ãâ·Â(STUDENT)
-SELECT SNO || ' : ' || SNAME AS ÇÐ¹øÀÌ¸§   --º°Äª ¸¸µé±â
+--5-2. í•™ìƒë²ˆí˜¸ : í•™ìƒì´ë¦„ ì—°ê²°í•´ì„œ ì¶œë ¥(STUDENT)
+SELECT SNO || ' : ' || SNAME AS í•™ë²ˆì´ë¦„   --ë³„ì¹­ ë§Œë“¤ê¸°
     FROM STUDENT;
 
---6. Áßº¹Á¦°Å³ª DISTINCT
+--6. ì¤‘ë³µì œê±°ë‚˜ DISTINCT
 SELECT JOB
     FROM EMP;
 
---6-1. ÄÃ·³ ÇÏ³ª¿¡ ´ëÇÑ Áßº¹ Á¦°Å
+--6-1. ì»¬ëŸ¼ í•˜ë‚˜ì— ëŒ€í•œ ì¤‘ë³µ ì œê±°
 SELECT DISTINCT JOB
     FROM EMP;
     
---6-2. ÄÃ·³ µÎ °³ ÀÌ»ó¿¡ ´ëÇÑ Áßº¹ Á¦°Å
---°¢°¢ ÄÃ·³¿¡ DISTINCT¸¦ ºÙ¿©ÁÖ´Â °ÍÀÌ ¾Æ´Ï°í
---µÎ°³ÀÇ ÄÃ·³ÀÌ ÇÑ ½ÖÀÇ µ¥ÀÌÅÍ ¼ÂÀÌ µÇ¾î¼­ 
---µÎ °³ÀÇ ÄÃ·³ÀÇ µ¥ÀÌÅÍ°¡ ¸ðµÎ Áßº¹µÇÁö ¾ÊÀ¸¸é 
---Áßº¹À¸·Î ÀÎ½ÄÇÏÁö ¾Ê´Â´Ù.
+--6-2. ì»¬ëŸ¼ ë‘ ê°œ ì´ìƒì— ëŒ€í•œ ì¤‘ë³µ ì œê±°
+--ê°ê° ì»¬ëŸ¼ì— DISTINCTë¥¼ ë¶™ì—¬ì£¼ëŠ” ê²ƒì´ ì•„ë‹ˆê³ 
+--ë‘ê°œì˜ ì»¬ëŸ¼ì´ í•œ ìŒì˜ ë°ì´í„° ì…‹ì´ ë˜ì–´ì„œ 
+--ë‘ ê°œì˜ ì»¬ëŸ¼ì˜ ë°ì´í„°ê°€ ëª¨ë‘ ì¤‘ë³µë˜ì§€ ì•Šìœ¼ë©´ 
+--ì¤‘ë³µìœ¼ë¡œ ì¸ì‹í•˜ì§€ ì•ŠëŠ”ë‹¤.
 SELECT DISTINCT JOB
         , MGR
         FROM EMP;
         
---7. µ¥ÀÌÅÍ¸¦ Á¤·ÄÇØÁÖ´Â ORDER BY
---7-1. ÇÑ °³ÀÇ ÄÃ·³¿¡ ´ëÇÑ Á¤·Ä
+--7. ë°ì´í„°ë¥¼ ì •ë ¬í•´ì£¼ëŠ” ORDER BY
+--7-1. í•œ ê°œì˜ ì»¬ëŸ¼ì— ëŒ€í•œ ì •ë ¬
 
---¿À¸§Â÷¼øÀ¸·Î Á¤·Ä. ASC»ý·« °¡´É. 
+--ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬. ASCìƒëžµ ê°€ëŠ¥. 
 SELECT *
     FROM STUDENT
     ORDER BY SYEAR ASC;
 
---³»¸²Â÷¼øÀ¸·Î Á¤·Ä. DESC.
+--ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬. DESC.
 SELECT *
     FROM STUDENT
     ORDER BY SYEAR DESC;
     
---7-2. µÎ °³ÀÇ ÄÃ·³À» ±âÁØÀ¸·Î Á¤·Ä
---¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
---ÄÄ¸¶¸¦ »ç¿ëÇØ¼­ ´ÙÀ½ Á¤·ÄµÉ ´ë»ó ÄÃ·³À» ÁöÁ¤
---¸ÕÀú ÁöÁ¤µÈ ÄÃ·³ºÎÅÍ Á¤·ÄÀ» ÁøÇàÇÏ°í
---´ÙÀ½ ¿À´Â ÄÃ·³¿¡ ´ëÇÑ Á¤·ÄÀ» ÁøÇàÇÑ´Ù.
+--7-2. ë‘ ê°œì˜ ì»¬ëŸ¼ì„ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬
+--ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
+--ì»´ë§ˆë¥¼ ì‚¬ìš©í•´ì„œ ë‹¤ìŒ ì •ë ¬ë  ëŒ€ìƒ ì»¬ëŸ¼ì„ ì§€ì •
+--ë¨¼ì € ì§€ì •ëœ ì»¬ëŸ¼ë¶€í„° ì •ë ¬ì„ ì§„í–‰í•˜ê³ 
+--ë‹¤ìŒ ì˜¤ëŠ” ì»¬ëŸ¼ì— ëŒ€í•œ ì •ë ¬ì„ ì§„í–‰í•œë‹¤.
 SELECT *
     FROM STUDENT
     ORDER BY SYEAR, SNAME ASC;
 
---°¢ ÄÃ·³¸¶´Ù Á¤·Ä ¹æ½ÄÀ» µû·Î ¼³Á¤ÇÒ ¼ö ÀÖ´Ù.
+--ê° ì»¬ëŸ¼ë§ˆë‹¤ ì •ë ¬ ë°©ì‹ì„ ë”°ë¡œ ì„¤ì •í•  ìˆ˜ ìžˆë‹¤.
 SELECT *
     FROM STUDENT
     ORDER BY SYEAR DESC, MAJOR, AVR ASC;    
     
---ºÎ¼­º°(DNO)·Î Á¤·ÄÇÏ´Âµ¥ ±Þ¿©(SAL)°¡ ³ôÀº »ç¶÷ ¸ÕÀú ³ª¿Àµµ·Ï(EMP)
+--ë¶€ì„œë³„(DNO)ë¡œ ì •ë ¬í•˜ëŠ”ë° ê¸‰ì—¬(SAL)ê°€ ë†’ì€ ì‚¬ëžŒ ë¨¼ì € ë‚˜ì˜¤ë„ë¡(EMP)
 --ENO, ENAME, DNO, SAL
 SELECT ENO
     , ENAME
@@ -112,64 +112,64 @@ SELECT ENO
     FROM EMP
     ORDER BY DNO, SAL DESC;
     
---º°ÄªÀ» ºÙÀÎ °æ¿ì¿¡´Â º°ÄªÀ¸·Î Á¤·Äµµ °¡´É
+--ë³„ì¹­ì„ ë¶™ì¸ ê²½ìš°ì—ëŠ” ë³„ì¹­ìœ¼ë¡œ ì •ë ¬ë„ ê°€ëŠ¥
 SELECT ENO
     , ENAME
-    , DNO AS ºÎ¼­¹øÈ£
-    , SAL AS ±Þ¿©
+    , DNO AS ë¶€ì„œë²ˆí˜¸
+    , SAL AS ê¸‰ì—¬
     FROM EMP
-    ORDER BY ºÎ¼­¹øÈ£, ±Þ¿© DESC;
+    ORDER BY ë¶€ì„œë²ˆí˜¸, ê¸‰ì—¬ DESC;
     
---8. Á¶°ÇÀ» °É¾îÁÖ´Â WHERE
---8-1. °ªÀÇ Å©±â ºñ±³
---±Þ¿©°¡ 3000ÀÌ»óÀÎ Á÷¿ø ¸ñ·Ï Á¶È¸
+--8. ì¡°ê±´ì„ ê±¸ì–´ì£¼ëŠ” WHERE
+--8-1. ê°’ì˜ í¬ê¸° ë¹„êµ
+--ê¸‰ì—¬ê°€ 3000ì´ìƒì¸ ì§ì› ëª©ë¡ ì¡°íšŒ
 SELECT *
     FROM EMP
     WHERE SAL >= 3000;
     
---Àü°øÀÌ È­ÇÐ°úÀÎ ÇÐ»ýµé ¸ñ·Ï
+--ì „ê³µì´ í™”í•™ê³¼ì¸ í•™ìƒë“¤ ëª©ë¡
 SELECT *
     FROM STUDENT
-    WHERE MAJOR = 'È­ÇÐ';
+    WHERE MAJOR = 'í™”í•™';
 
---Á¶°ÇÀýÀ» »ç¿ëÇÒ ¶§´Â ÄÃ·³ÀÇ Å¸ÀÔÀ¸·Î ºñ±³ÇÒ °ªÀ» ÁöÁ¤ÇÑ´Ù.
---°ªÀ» ÄÃ·³ÀÇ Å¸ÀÔ°ú ´Ù¸¥ Å¸ÀÔÀ¸·Î ÀâÀ» °æ¿ì
---ÄÃ·³ÀÇ ¸ðµç µ¥ÀÌÅÍ°¡ °ªÀÇ Å¸ÀÔÀ¸·Î º¯°æµÈ ´ÙÀ½ ºñ±³¸¦ ÇÏ°Ô µÈ´Ù.
---µ¥ÀÌÅÍ°¡ ¸¹¾ÆÁú °æ¿ì ¸ðµç µ¥ÀÌÅÍ¿¡¼­ ÇÑ ¹ø ¾¿ Çüº¯È¯ÀÌ ÀÏ¾î³ª±â ¶§¹®¿¡
---Äõ¸® ¼Óµµ°¡ ¸Å¿ì ÀúÇÏµÈ´Ù.
---Á¶°ÇÀý¿¡¼­ ºñ±³ÇÒ ¶§ ÄÃ·³ÀÇ Å¸ÀÔÀ» º¯È¯ÇÏ´Â ÀÏÀÌ ÀÖ¾î¼­´Â ¾ÈµÈ´Ù.
---ºñ±³ÇÒ °ªÀ» ÄÃ·³ÀÇ Å¸ÀÔ°ú ¸ÂÃç¾ß ÇÑ´Ù.
+--ì¡°ê±´ì ˆì„ ì‚¬ìš©í•  ë•ŒëŠ” ì»¬ëŸ¼ì˜ íƒ€ìž…ìœ¼ë¡œ ë¹„êµí•  ê°’ì„ ì§€ì •í•œë‹¤.
+--ê°’ì„ ì»¬ëŸ¼ì˜ íƒ€ìž…ê³¼ ë‹¤ë¥¸ íƒ€ìž…ìœ¼ë¡œ ìž¡ì„ ê²½ìš°
+--ì»¬ëŸ¼ì˜ ëª¨ë“  ë°ì´í„°ê°€ ê°’ì˜ íƒ€ìž…ìœ¼ë¡œ ë³€ê²½ëœ ë‹¤ìŒ ë¹„êµë¥¼ í•˜ê²Œ ëœë‹¤.
+--ë°ì´í„°ê°€ ë§Žì•„ì§ˆ ê²½ìš° ëª¨ë“  ë°ì´í„°ì—ì„œ í•œ ë²ˆ ì”© í˜•ë³€í™˜ì´ ì¼ì–´ë‚˜ê¸° ë•Œë¬¸ì—
+--ì¿¼ë¦¬ ì†ë„ê°€ ë§¤ìš° ì €í•˜ëœë‹¤.
+--ì¡°ê±´ì ˆì—ì„œ ë¹„êµí•  ë•Œ ì»¬ëŸ¼ì˜ íƒ€ìž…ì„ ë³€í™˜í•˜ëŠ” ì¼ì´ ìžˆì–´ì„œëŠ” ì•ˆëœë‹¤.
+--ë¹„êµí•  ê°’ì„ ì»¬ëŸ¼ì˜ íƒ€ìž…ê³¼ ë§žì¶°ì•¼ í•œë‹¤.
 
---DNOÀÌ nullÀÎ Á÷¿ø ¸ñ·Ï Á¶È¸
+--DNOì´ nullì¸ ì§ì› ëª©ë¡ ì¡°íšŒ
 SELECT *
     FROM EMP
     WHERE COMM IS NULL;
 
---9. ´ÙÁß Á¶°Ç ¸¸µé±â AND, OR
---9-1. ¸ðµç Á¶°ÇÀ» ÃæÁ·ÇÏ´Â µ¥ÀÌÅÍ¸¦ Á¶È¸
---ÇÐ³âÀÌ 1ÇÐ³âÀÌ¸é¼­ ÀÌ¸§¿¡ '¿ì'·Î ³¡³ª´Â ÇÐ»ý ¸ñ·Ï Á¶È¸
+--9. ë‹¤ì¤‘ ì¡°ê±´ ë§Œë“¤ê¸° AND, OR
+--9-1. ëª¨ë“  ì¡°ê±´ì„ ì¶©ì¡±í•˜ëŠ” ë°ì´í„°ë¥¼ ì¡°íšŒ
+--í•™ë…„ì´ 1í•™ë…„ì´ë©´ì„œ ì´ë¦„ì— 'ìš°'ë¡œ ëë‚˜ëŠ” í•™ìƒ ëª©ë¡ ì¡°íšŒ
 SELECT *
     FROM STUDENT
     WHERE SYEAR = 1
-      AND SNAME LIKE '%¿ì';
+      AND SNAME LIKE '%ìš°';
       
---È¸°è¾÷¹«¸¦ ÇÏ¸é¼­ ±Þ¿©°¡ 3000ÀÌ»óÀÌ°í ÀÌ¸§ÀÌ ¼¼ÀÚÀÎ Á÷¿ø ¸ñ·Ï Á¶È¸
+--íšŒê³„ì—…ë¬´ë¥¼ í•˜ë©´ì„œ ê¸‰ì—¬ê°€ 3000ì´ìƒì´ê³  ì´ë¦„ì´ ì„¸ìžì¸ ì§ì› ëª©ë¡ ì¡°íšŒ
 SELECT *
     FROM EMP
-    WHERE JOB = 'È¸°è'
+    WHERE JOB = 'íšŒê³„'
      AND SAL >= 3000
      AND ENAME LIKE  '___';
      
      
---±â¸»°í»ç ¼ºÀûÀÌ 75Á¡ ÀÌ»óÀÌ°Å³ª °ú¸ñ¹øÈ£°¡ 1211ÀÎ ÇÐ»ý ¸ñ·Ï Á¶È¸
+--ê¸°ë§ê³ ì‚¬ ì„±ì ì´ 75ì  ì´ìƒì´ê±°ë‚˜ ê³¼ëª©ë²ˆí˜¸ê°€ 1211ì¸ í•™ìƒ ëª©ë¡ ì¡°íšŒ
 SELECT *
     FROM SCORE
     WHERE RESULT >= 75
        OR CNO = '1211';
 
---AND, OR È¥ÇÕ »ç¿ë
---DNO°¡ 10ÀÌ°Å³ª ±Þ¿©°¡ 1600ÀÌ»óÀÎ Á÷¿ø Áß º¸³Ê½º°¡ 600ÀÌ»óÀÎ Á÷¿ø
---()¸¦ ÀÌ¿ëÇØ¼­ ¿ì¼±¼øÀ§ ÁöÁ¤
+--AND, OR í˜¼í•© ì‚¬ìš©
+--DNOê°€ 10ì´ê±°ë‚˜ ê¸‰ì—¬ê°€ 1600ì´ìƒì¸ ì§ì› ì¤‘ ë³´ë„ˆìŠ¤ê°€ 600ì´ìƒì¸ ì§ì›
+--()ë¥¼ ì´ìš©í•´ì„œ ìš°ì„ ìˆœìœ„ ì§€ì •
 
 SELECT * 
     FROM EMP
@@ -177,19 +177,61 @@ SELECT *
        OR SAL >= 2000)
       AND COMM >= 600;
       
---ÆòÁ¡ÀÌ 2.0 ÀÌ»óÀÌ°Å³ª ÀÌ¸§ÀÌ 3ÀÚÀÎ ÇÐ»ý Áß ¹°¸® Àü°øÀÎ ÇÐ»ý ¸ñ·Ï Ãâ·Â
+--í‰ì ì´ 2.0 ì´ìƒì´ê±°ë‚˜ ì´ë¦„ì´ 3ìžì¸ í•™ìƒ ì¤‘ ë¬¼ë¦¬ ì „ê³µì¸ í•™ìƒ ëª©ë¡ ì¶œë ¥
 SELECT *
     FROM STUDENT
     WHERE (AVR >= 2.0
        OR SNAME LIKE '___')
-      AND MAJOR = '¹°¸®';
+      AND MAJOR = 'ë¬¼ë¦¬';
+      
+--10. ì‚¬ì´ê°’ì„ ì°¾ì•„ì£¼ëŠ” BETWEEN ANDì ˆ
+--ê¸‰ì—¬ê°€ 3500ì—ì„œ 5000ì‚¬ì´ì— ìžˆëŠ” ì§ì›ëª©ë¡ ì¡°íšŒ
+SELECT *
+    FROM EMP
+    WHERE SAL BETWEEN 3500 AND 5000;
+    
+--ê¸‰ì—¬ê°€ 3500ì—ì„œ 5000 ì‚¬ì´ì— ìžˆê³  ë¶€ì„œë²ˆí˜¸ê°€ 01~ 10ì¸ ì§ì› ëª©ë¡ ì¡°íšŒ
+SELECT * 
+    FROM EMP
+    WHERE SAL BETWEEN 3500 AND 5000
+      AND DNO BETWEEN '01' AND '10';
+      
+--TO_DATE ì‚¬ìš©í•´ì„œ ìž„ìš©ì¼ìžê°€ 1994ë…„ 1ì›” 1ì¼ ì´í›„ 1998ë…„ 2ì›” 3ì¼ ì´ì „ì¸ êµìˆ˜ëª©ë¡ ì¡°íšŒ
+SELECT *
+    FROM PROFESSOR
+    WHERE HIREDATE BETWEEN TO_DATE('19940101')
+      AND TO_DATE('19980202')
+      ORDER BY HIREDATE;
+    
+--DNO = 10 OR 20 OR 30 ì§ì›ëª©ë¡ ì¡°íšŒ (INì ˆë¡œ ë³€í™˜)
+SELECT *
+    FROM EMP
+    WHERE DNO IN ('10', '20', '30');
+       
+--DATE í‘œì‹œ í˜•ì‹ ì§€ì •
+ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY/MM/DD HH24:MI:SS';
+    
+--11. ì—¬ëŸ¬ê°œì˜ ë°ì´í„°ë¥¼ ë¹„êµí•´ì£¼ëŠ” INì ˆ
+--í™”í•™ê³¼ë‚˜ ë¬¼ë¦¬í•™ê³¼ í•™ìƒì´ë©´ì„œ 1, 2, 3í•™ë…„ì¸ í•™ìƒë§Œ ì¡°íšŒ
+SELECT *
+    FROM STUDENT
+    WHERE MAJOR IN('í™”í•™', 'ë¬¼ë¦¬')
+      AND SYEAR IN(1, 2, 3)
+      ORDER BY MAJOR, SYEAR;
+    
 
+--ì—…ë¬´ê°€ ê°œë°œ, ê²½ì˜ì´ë©´ì„œ ë³´ë„ˆìŠ¤ê°€ 700ì´ìƒì¸ ì§ì› ëª©ë¡ ì¡°íšŒ
+SELECT *
+    FROM EMP
+    WHERE JOB IN('ê°œë°œ', 'ê²½ì˜')
+      AND COMM >= 700;
     
-    
-    
-    
-    
-    
+--ê³¼ëª©ì˜ PNOì„ ì‚¬ìš©í•´ì„œ PROFESSORì˜ PNAMEì„ ì¡°íšŒ
+SELECT A.*
+    ,B.
+    FROM COURSE A
+    LEFT OUTER JOIN PROFESSOR B
+    ON A.PNO = B.PNO
     
     
 

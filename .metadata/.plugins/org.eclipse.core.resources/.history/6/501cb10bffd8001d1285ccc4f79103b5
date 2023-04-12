@@ -1,8 +1,5 @@
 package test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class _0411 {
 
 	public static void main(String[] args) {
@@ -21,48 +18,38 @@ public class _0411 {
 		String[] participant = { "aa", "bb", "cc", "dd", "ee" };
 		String[] completion = { "aa", "bb", "cc", "dd" };
 
-		//map을 이용해서
-		//participant에 있으면 +1
-		//completion에 있으면 +1, 없으면 0
-		//없는 것만 return
-		
-		
-		Map<String, Integer> map = solution(participant);
-		
-		
-	
-}
+
+		//map<>
+		//entry<>
 		
 		class Solution {
 			public String solution(String[] participant, String[] completion) {
 				String answer = "";
 				
-				Map<String, Integer> map = new HashMap<String, Integer>();
-				
-				for(String str : participant) {
-					if(!map.containsKey(str)) {		//기존에 없으면 
-						map.put(str, 1);			// +1
-					}else {
-						map.put(str,  map.get(str) + 1);	//기존에 있으면 거기에 +1
+				boolean found = false;
+
+				for(String str1 : completion) {
+					for(String str2 : participant) {
+						if(participant.equals(completion)) {
+							found = true;
+							break;
+						}
+					}
+					
+					if(false) {
+						return "";
 					}
 				}
-				
-				
-				for(String str : completion) {
-					if(map.containsKey(str)) {
-						map.put(str, -1);
-					}else {
-						map.put(str, map.get(str) - 1);
-					}
-				}
+				return answer;
 				
 				
 				
-				return map;
 				
-	
+				
+
 			}
 		}
 
-}
+	}
 
+}

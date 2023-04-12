@@ -21,21 +21,15 @@ public class _0411 {
 		String[] participant = { "aa", "bb", "cc", "dd", "ee" };
 		String[] completion = { "aa", "bb", "cc", "dd" };
 
-		//map을 이용해서
-		//participant에 있으면 +1
-		//completion에 있으면 +1, 없으면 0
-		//없는 것만 return
+		Map<String, Integer> map = solution(completion);
 		
 		
-		Map<String, Integer> map = solution(participant);
-		
-		
-	
+	}
 }
 		
 		class Solution {
 			public String solution(String[] participant, String[] completion) {
-				String answer = "";
+				
 				
 				Map<String, Integer> map = new HashMap<String, Integer>();
 				
@@ -47,22 +41,10 @@ public class _0411 {
 					}
 				}
 				
-				
-				for(String str : completion) {
-					if(map.containsKey(str)) {
-						map.put(str, -1);
-					}else {
-						map.put(str, map.get(str) - 1);
-					}
-				}
-				
-				
-				
 				return map;
 				
 	
 			}
-		}
-
 }
+	
 
