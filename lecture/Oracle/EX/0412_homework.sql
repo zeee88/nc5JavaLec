@@ -11,7 +11,7 @@ SELECT *
 --3) 화학과와 물리학과, 생물학과 학생을 검색하라(in)
 SELECT *
     FROM STUDENT
-    WHERE MAJOR IN('화학', '생물');
+    WHERE MAJOR IN('화학', '생물', '물리');
 
 --4) 정교수와 조교수를 검색하라(in)
 SELECT *
@@ -108,7 +108,7 @@ SELECT S.*
     ON C.CNAME = '일반화학'
     AND C.CNO = SC.CNO;
     
---8) 화학과 1학년 학생이 수강하는 과목을 검색한다
+--8) 화학과 1학년 학생이 수강하는 과목을 검색한다**************************
 SELECT S.*
     , C.*
     FROM STUDENT S
@@ -164,16 +164,19 @@ SELECT C.*
 SELECT C.CNAME
         , P.PNAME
         FROM COURSE C
-        JOIN PROFESSOR P
+        LEFT JOIN PROFESSOR P
         ON C.PNO = P.PNO; 
 
 --2) 화학과 학생의 기말고사 성적을 모두 검색하라
 SELECT S.MAJOR
-      ,SC.RESULT
+      , C.CNAME
+      , SC.RESULT
       FROM STUDENT S
       JOIN SCORE SC
       ON S.MAJOR = '화학'
-      AND S.SNO = SC.SNO;
+      AND S.SNO = SC.SNO
+      JOIN COURSE C
+      ON C.CNO = SC.CNO;
 
 --3) 유기화학과목 수강생의 기말고사 시험점수를 검색하라
 SELECT C.*
@@ -184,8 +187,9 @@ SELECT C.*
     AND C.CNO = SC.CNO;
 
 --4) 화학과 학생이 수강하는 과목을 담당하는 교수의 명단을 검색하라
-SELECT  S.MAJOR
-      , P.*
+SELECT  DISTINCT S.MAJOR
+      , P.PNAME
+      , C.CNAME
     FROM PROFESSOR P
     JOIN COURSE C
     ON C.PNO = P.PNO
@@ -196,7 +200,7 @@ SELECT  S.MAJOR
 SELECT P.*
     , C.CNAME
     FROM PROFESSOR P
-    LEFT OUTER JOIN COURSE C
+    FULL OUTER JOIN COURSE C
     ON P.PNO= C.PNO;
 
 --6) 모든 교수의 명단과 담당 과목을 검색한다(단 모든 과목도 같이 검색한다)

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="chap19_multithread.clazz.NonSyncThread1"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.NonSyncThread2"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread2"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread1"/>
@@ -37,7 +36,6 @@
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="chap19_multithread._08_NonSyncShareObj"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

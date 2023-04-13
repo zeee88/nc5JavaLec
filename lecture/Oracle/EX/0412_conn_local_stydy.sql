@@ -143,8 +143,15 @@ SELECT S.SNO
      ON S.SNO = SC.SNO;
 
 
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
