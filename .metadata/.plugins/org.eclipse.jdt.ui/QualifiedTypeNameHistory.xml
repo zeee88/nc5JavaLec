@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="chap19_multithread.clazz.NonSyncThread2"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread2"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.SyncThread1"/>
     <fullyQualifiedTypeName name="chap19_multithread.clazz.PrintNumWithWaitNotify"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

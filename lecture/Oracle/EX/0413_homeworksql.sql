@@ -51,7 +51,7 @@ SELECT PNAME
 
 --4) 학생들의 4.5 환산 평점을 검색하세요(단 소수 이하 둘째자리까지)
 SELECT SNAME
-     , ROUND(AVR*4.5/4.0, 2)
+     , ROUND(AVR*4.0/4.5, 2)
     FROM STUDENT;
 
 --5) 사원들의 오늘까지 근무 기간이 몇 년 몇 개월 며칠인지 검색하세요
@@ -61,7 +61,7 @@ SELECT SNAME
 --    FROM EMP;
 
 SELECT TRUNC((MONTHS_BETWEEN(SYSDATE, HDATE)/12)) || '년 '
-    || TRUNC(MOD(MONTHS_BETWEEN(SYSDATE, HDATE), 12)) || '개월 '    
+    || TRUNC(MOD(MONTHS_BETWEEN(SYSDATE, HDATE), 12)) || '월 '    
     || CEIL((MOD(MONTHS_BETWEEN(SYSDATE, HDATE), 12) - TRUNC(MOD(MONTHS_BETWEEN(SYSDATE, HDATE), 12)))* 30) || '일'
     FROM EMP;
 
@@ -84,23 +84,11 @@ SELECT PNAME || ' 교수의 부임일은 ' ||SUBSTR(ROUND(HIREDATE, 'DD'), 1, 4)
         || '년 ' || SUBSTR(ROUND(HIREDATE, 'DD'), 6, 2) 
         || '월 ' || SUBSTR(ROUND(HIREDATE, 'DD'), 9, 2) || '일입니다.'
     FROM PROFESSOR;
-    
-SELECT PNAME || ' 교수의 부임일은 ' || TO_CHAR(HIREDATE, 'YYYY') || '년 ' ||
-        TO_CHAR(HIREDATE, 'MM') || '월 ' || TO_CHAR(HIREDATE, 'DD') || '일입니다.'
-        FROM PROFESSOR;
-        
-SELECT PNAME || TO_CHAR(HIREDATE, '"교수의 부임일은 "YYYY"년 "MM"월 "DD"일 입니다."')
-    FROM PROFESSOR;
    
 --3) 교수중에 3월에 부임한 교수의 명단을 검색하세요
 SELECT PNAME 
     FROM PROFESSOR
     WHERE SUBSTR(TRUNC(HIREDATE, 'MM'), 6, 2)= 3;
-    
-    
-SELECT PNAME
-    FROM PROFESSOR
-    WHERE TO_CHAR(HIREDATE, 'MM') = '03';
 
 
 
