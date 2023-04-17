@@ -226,9 +226,9 @@ SELECT DNO
 --부서 중 평균 급여가 가장 높은 부서의 부서번호와 평균급여(EMP 테이블만 사용)
 --그룹 함수에 대한 조건은 WHERE절에서 사용 불가
 --WHERE절에서 그룹함수를 쓰는 방식은 그룹함수를 사용한 쿼리를 서브쿼리로 묶어서 테이블로 만든 다음 사용한다.
-SELECT DNO
-     ,AVG(SAL)
-    FROM EMP
+SELECT E.DNO
+     ,EE.ASAL
+    FROM EMP E
     GROUP BY DNO
    HAVING AVG(SAL) = (
             SELECT MAX(AVG(SAL)) AS ASAL
@@ -237,6 +237,7 @@ SELECT DNO
         )EE
         ON EE.ASAL = E.SAL
         AND E.ENO = EE.ENO;
+        --***************************************
 
 --임용년도가 동일한 교수의 수를 조회
 SELECT 
