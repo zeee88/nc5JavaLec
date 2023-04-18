@@ -19,8 +19,6 @@ PIVOT(AVG(AVR * 4.5/4.0) FOR MAJOR IN(
                                 )
                                 );
 
---ROUND어떻게 쓰지????????????????????????????????????????????????????????????????????????????????????????????????
-
 
 --3) 학과별 학생이름을 ,로 구분하여 성적순으로(내림차순) 조회하세요.(LISTAGG 사용)
 
@@ -121,6 +119,16 @@ SELECT *
                             ,('물리', 1),('물리', 2),('물리', 3));
 
 
+SELECT *
+    FROM STUDENT
+    WHERE (MAJOR, SYEAR) IN(
+                            SELECT MAJOR   
+                                , SYEAR
+                                FROM STUDENT
+                                WHERE MAJOR IN ('화학', '물리')
+                                  AND SYEAR IN(1, 2, 3)
+                                  );
+
 
 --3) 다중 컬럼 IN절을 사용해서 부서가 10, 20, 30이면서 보너스가 1000이상인 사원의 사원번호, 사원이름, 부서번호, 부서이름, 업무, 급여, 보너스를 
 --   조회하세요.(서브쿼리 사용)
@@ -182,10 +190,9 @@ SELECT C.CNO
 WITH
     E AS(SELECT * FROM EMP WHERE SAL >= 3000),
     EE AS(SELECT * FROM EMP WHERE COMM >= 500)
-SELECT E.*
+SELECT *
     FROM E
-        ,EE
-        WHERE E.ENO = EE.ENO;
+    NATURAL JOIN EE;
 
 --3) WITH 절을 이용하여 평점이 3.3이상인 학생의 목록을 갖는 가상테이블 하나와 학생별 기말고사 평균점수를 갖는 가상테이블 하나를 생성하여
 --   평점이 3.3이상인 학생의 기말고사 평균 점수를 조회하세요.
