@@ -41,19 +41,6 @@ SELECT *
 --   DNO = 20인 사원의 급여를 10프로 상승시킨 값으로 변경하세요.
 CREATE TABLE EMP2
     AS SELECT * FROM EMP;
-    
-UPDATE EMP2
-    SET COMM = (SELECT COMM *1.15
-                    FROM EMP2
-                    WHERE DNO = '30'
-                ),
-        
-     SAL = (SELECT SAL *1.1
-                FROM EMP2
-                WHERE DNO = '20'
-                );
-                
---??????????????????????????????????????????????????????????????????????????????????
 
 UPDATE EMP2
     SET 
@@ -70,20 +57,20 @@ SELECT *
 
 
 --6) 화학과 2학년 학생중 기말고사 성적의 등급이 A, B인 정보를 갖는 테이블 SCORE_STGR을 생성하세요.(SNO, SNAME, MAJOR, SYEAR, RESULT, GRADE)
-CREATE TABLE SCORE_STGR
-    AS SELECT SNO, SNAME, MAJOR, SYEAR, RESULT, GRADE FROM STUDENT NATURAL JOIN SCORE NATURAL JOIN SCGRADE
+CREATE TABLE SCORE_STGR1
+    AS SELECT SNO, SNAME, MAJOR, SYEAR, RESULT, GRADE FROM STUDENT NATURAL JOIN SCORE SC JOIN SCGRADE SG ON SC.RESULT BETWEEN SG.LOSCORE AND SG.HISCORE
     WHERE MAJOR = '화학'
     AND SYEAR = 2
     AND GRADE IN( 'A', 'B');
 
 
 SELECT *
-    FROM SCORE_STGR;
+    FROM SCORE_STGR1;
 
---7) 생물학과 학생중 평점이 2.7이상인 학생이 수강중인 과목의 정보를 갖는 테이블 ST_COURSEPF를 생성하세요. (SNO, SNAME, CNO, CNAME, PNO, PNAME, AVR)
+--7) 생물학과 학생중 평점이 2.7이상인 학생이 수강중인 과목의 정보를 갖는 테이블 ST_COURSEPF를 생성하세요. (SNO, SNAME, CNO, CNAME, PNO, PNAME, RESULT, AVR)
 
 CREATE TABLE ST_COURSEPF
-    AS SELECT SNO, SNAME, CNO, CNAME, PNO, PNAME, AVR FROM STUDENT NATURAL JOIN COURSE NATURAL JOIN PROFESSOR
+    AS SELECT SNO, SNAME, CNO, CNAME, PNO, PNAME, RESULT, AVR FROM STUDENT NATURAL JOIN SCORE NATURAL JOIN COURSE NATURAL JOIN PROFESSOR
     WHERE MAJOR = '생물'
     AND AVR >= 2.7;
 
