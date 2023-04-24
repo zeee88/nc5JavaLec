@@ -34,7 +34,6 @@ CREATE TABLE COURSE_CONSTRAINT(
     );
 
 
-
 --4) 다음 구조를 갖는 테이블을 생성하세요.
 --   T_SNS                              T_SNS_DETAIL                        T_SNS_UPLOADED
 --   SNS_NO(PK)    SNS_NM               SNS_NO(PK, FK)   SNS_BEN            SNS_NO(PK, FK)    SNS_UPL_NO(PK)
@@ -65,6 +64,23 @@ CREATE TABLE T_SNS_UPLOADED(
     REFERENCES T_SNS_DETAIL(SNS_NO)
     );
 
+INSERT INTO T_SNS
+VALUES(1, '페북');
+
+INSERT INTO T_SNS_DETAIL
+VALUES(1, 3000);
+
+INSERT INTO T_SNS_UPLOADED
+VALUES(1, 7);
+
+SELECT * 
+FROM T_SNS;
+
+SELECT * 
+FROM T_SNS_DETAIL;
+
+SELECT * 
+FROM T_SNS_UPLOADED;
 
 --33----------------------------------------------------------------------------------------------------------------
 --1) 다음 구조를 갖는 테이블을 생성하세요.
@@ -106,7 +122,7 @@ CREATE TABLE PAYMENT_DETAIL(
     TOTAL_PRICE NUMBER NOT NULL CONSTRAINT CHE_PAYD CHECK(TOTAL_PRICE > 0),
     CONSTRAINT PK_PAYD PRIMARY KEY(MNO, PNO),
     CONSTRAINT FK_PAYD FOREIGN KEY(MNO) REFERENCES PAYMENT(MNO),
-    CONSTRAINT FK_PAYD2 FOREIGN KEY(PNO)REFERENCES PRODUCT(PNO)
+    CONSTRAINT FK_PAYD2 FOREIGN KEY(PNO) REFERENCES PRODUCT(PNO)
     );
     
 
