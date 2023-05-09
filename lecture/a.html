@@ -1,0 +1,19 @@
+## 도메인 만들기
+
+1. 도메인 연결시킬 코드 입력할 공간 만들기
+/etc/nginx/sites-enabled sudo vi [지정한 이름]
+
+2. 도메인 만들 공간 만들기
+/var/www sudo mkdir [파일명]
+ex) ubuntu@test1:/var/www$ sudo mkdir b
+    ubuntu@test1:/var/www/b$ sudo vi index.html
+
+3. restart
+ubuntu@test1:/var/www/b$ sudo systemctl restart nginx.service
+
+3. 도메인에 구현하기 위한 코드 작성
+sudo vi [파일명]
+ex) 
+i 입력해서 작성
+
+* ubuntu에서 root의 권한을 쓰기위해 sudo 사용

@@ -1,4 +1,6 @@
 /Homework/
+/chap15_usefulClass/
+/chap22_IO/
 /Homework_0328/
 /Homework_0330/
 /Homework_0403/
@@ -18,14 +20,12 @@
 /chap12_nestedclass/
 /chap13_objectarray/
 /chap14_exception/
-/chap15_usefulClass/
 /chap16_collectionFramework/
 /chap17_generic/
 /chap18_enum/
 /chap19_multithread/
 /chap20_lambda/
 /chap21_stream/
-/chap22_IO/
 /chap99_etc/
-/java/
 /test/
+/chap23_jdbc/

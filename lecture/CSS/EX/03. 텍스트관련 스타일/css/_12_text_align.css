@@ -1,0 +1,26 @@
+p{
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.center{
+    text-align: center;
+}
+
+.justify1{
+    text-align: justify;
+}
+
+.justify2{
+    text-align: justify;
+    text-justify: distribute;
+}

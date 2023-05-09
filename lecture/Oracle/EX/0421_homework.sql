@@ -1,5 +1,7 @@
 --1) 과목번호, 과목이름, 교수번호, 교수이름을 담을 수 있는 변수들을 선언하고 
 --   유기화확 과목의 과목번호, 과목이름, 교수번호, 교수이름을 출력하세요.
+SET SERVEROUTPUT ON;
+
 DECLARE
     CNO NUMBER;
     CNAME VARCHAR2(20);
@@ -82,9 +84,9 @@ DECLARE
         LEN NUMBER := 1;
     
 BEGIN
-SELECT C.CNO AS MI,
-       C.CNAME AS MII,
-       ROUND(AVG(RESULT),2) AS MIII
+SELECT C.CNO,
+       C.CNAME,
+       ROUND(AVG(RESULT),2)
 --       INTO  COUARR(IDX).MI
 --                , COUARR(IDX).MII
 --                , COURARR(IDX).MIII
@@ -125,12 +127,13 @@ CREATE TABLE T_STAVGSC(
     
 --커서 이용해서 조회
 DECLARE CURSOR CURST IS 
-        SELECT SNO
-            , SNAME
-            , ROUND(AVG(RESULT),2) AS NRES
-            FROM STUDENT
-            NATURAL JOIN SCORE
-            GROUP BY SNO, SNAME;
+        SELECT ST.SNO
+            , ST.SNAME
+            , NVL(ROUND(AVG(SC.RESULT),2),0) AS NRES
+            FROM STUDENT ST
+            LEFT JOIN SCORE SC
+            ON ST.SNO = SC.SNO
+            GROUP BY ST.SNO, ST.SNAME;
             
       STAVGSC_REC CURST%ROWTYPE;        --
       
@@ -150,3 +153,6 @@ BEGIN
     
     END;
     /
+    
+SELECT *
+    FROM T_STAVGSC;
