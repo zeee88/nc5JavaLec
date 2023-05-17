@@ -1,0 +1,16 @@
+div{
+    width : 100px;
+    height : 100px;
+    display : inline-block;
+}
+
+.box1{
+    background-color: orange;
+}
+
+.box2{
+    background-color: aqua;
+    position: relative;
+    left: -100px;
+    top: 20px;
+}

@@ -1,0 +1,38 @@
+div{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+.box1{
+    background: red;
+    background: repeating-linear-gradient(yellow, red 20px);
+    background: -webkit-repeating-linear-gradient(yellow, red 20px);
+    background: -moz-repeating-linear-gradient(yellow, red 20px);
+    background: -o-repeating-linear-gradient(yellow, red 20px);
+}
+
+.box2{
+    background: red;
+    background: repeating-radial-gradient(yellow, yellow 20px, red 20px, red 40px);
+    background: -webkit-repeating-radial-gradient(yellow, yellow 20px, red 20px, red 40px);
+    background: -moz-repeating-radial-gradient(yellow, yellow 20px, red 20px, red 40px);
+    background: -o-repeating-radial-gradient(yellow, yellow 20px, red 20px, red 40px);
+}
+
+.box3{
+    background: gray;
+    background: repeating-radial-gradient(white, white 10%, gray 10%, gray 20%);
+    background: -webkit-repeating-radial-gradient(white, white 10%, gray 10%, gray 20%);
+    background: -moz-repeating-radial-gradient(white, white 10%, gray 10%, gray 20%);
+    background: -o-repeating-radial-gradient(white, white 10%, gray 10%, gray 20%);
+    
+}
+
+.box4{
+    background: gray;
+    background: repeating-radial-gradient(white, gray 10%);
+    background: -webkit-repeating-radial-gradient(white, gray 10%);
+    background: -moz-repeating-radial-gradient(white, gray 10%);
+    background: -o-repeating-radial-gradient(white, gray 10%);
+}

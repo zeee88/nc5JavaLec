@@ -1,0 +1,38 @@
+div{
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    display: inline-block;
+    border: 5px solid black;
+    margin: 15px;
+    background-clip: content-box;
+}
+
+.box1{
+   /* padding: 10px 30px 10px 30px; */
+   padding: 10px 30px;
+}
+
+.box2{
+    padding: 10px 5px 15px;
+}
+
+.box3{
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.box4{
+    padding: 5%;
+}
+
+.box5{
+    display: block;
+    /* auto 값을 자동으로 좌우가 중앙으로 배치된다.
+    auto 속성이 태그의 가로길이를 뺀 나머지 공간의 좌우 마진을 똑같이 맞춰준다.
+    브라우저를 확대하거나 축소해도 항상 중앙에 배치된다.*/
+    /* 상하로는 불가능. height는 기본적으로 내용의 크기만큼 잡히기 때문에 */
+    margin: 10px auto;
+}
