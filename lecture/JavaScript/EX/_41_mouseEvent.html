@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #btn1{
+            position: absolute;
+            top: 600px;
+            left: 0;
+        }
+        #btn2{
+            position: absolute;
+            top: 600px;
+            left: 100px;
+        }
+        .click {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button class="btn" id="btn1">클릭</button>
+    <button class="btn" id="btn2">더블클릭</button>
+    <script>
+        const box = document.querySelector(".box");
+        const btn1 = document.querySelector("#btn1");
+        const btn2 = document.querySelector("#btn2");
+
+        let isClick = false;
+        let isDbClick = false;
+
+        btn1.addEventListener("click", (e) => {
+            // isClick = !isClick;
+
+            // if(isClick) {
+            //     box.style.width = "300px";
+            //     box.style.height = "300px";
+            //     return;
+            // }
+
+            // box.style.width = "100px";
+            // box.style.height = "100px";
+            box.classList.toggle("click");
+        })
+
+
+        btn1.addEventListener("click", (e) => {
+            box.style.width = "300px";
+            box.style.height = "100px";
+
+        });
+        btn2.ondblclick = e => {
+            box.style.marginLeft = "200px";
+            box.style.marginTop = "200px";
+
+        }
+
+
+        //box 마우스오버시 배경색 오렌지
+        box.addEventListener("mouseover", (e) =>{
+            box.style.background = "orange";
+        });
+        //box 마우스아웃시 배경색 스카이블루
+        box.addEventListener("mouseout", (e) =>{
+            box.style.background = "skyblue";
+        });
+
+    </script>
+</body>
+</html>
