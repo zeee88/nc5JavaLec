@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.RequiredArgsConstructor;
 import project1.spring.item.dto.ItemFormDto;
 import project1.spring.item.dto.ItemImgDto;
+import project1.spring.item.dto.ItemSearchDto;
 import project1.spring.item.entity.Item;
 import project1.spring.item.entity.ItemImg;
 import project1.spring.item.repository.ItemImgRepository;
@@ -88,5 +91,11 @@ public class ItemService {
 		//수정한 정보(상품)가 무엇인지 알려줌.
 		return item.getId();
 	}
+	
+	//ItemRepositoryCustom, ItemRepositoryCustomImpl에서 작성한 쿼리문 출력하기
+	public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+		return itemRepository.getAdminItemPage(itemSearchDto, pageable);
+	}
+	
 }
 

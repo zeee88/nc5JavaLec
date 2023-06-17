@@ -2,11 +2,15 @@ package project1.spring.item.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,6 +22,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
 import project1.spring.item.dto.ItemFormDto;
+import project1.spring.item.dto.ItemSearchDto;
+import project1.spring.item.entity.Item;
 import project1.spring.item.service.ItemService;
 
 @Controller
@@ -108,6 +114,22 @@ public class ItemController {
 		
 		//정상적으로 처리 완료되면 루트로 되돌리기
 		return "redirect:/";
+	}
+	
+	//상품관리 탭에서 상품목록 가져오기
+	@GetMapping({"/admin/items", "/admin/items/{page}"})	//페이지 정보 없는 것, 있는 것 둘 다 처리 가능.
+	public String itemList(ItemSearchDto itemSearchDto, Model model,
+			//페이지 정보를 들고 올 수도 있고 페이지 정보가 없을 수도 있다.
+			@PathVariable("page") Optional<Integer> page) {
+		//시작페이지는 페이지가 있으면 get()한 페이지 들고 오고 아니면 0으로 하겠다. 한 페이지에 상품은 3개씩 
+		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 3);
+		Page<Item> items = itemService.getAdminItemPage(itemSearchDto, pageable);
+		
+		model.addAttribute("items", items);
+		model.addAttribute("itemSearchDto", itemSearchDto);
+		model.addAttribute("maxPage", 5);
+		
+		return "item/itemList";
 	}
 	
 }
