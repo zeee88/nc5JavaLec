@@ -92,6 +92,13 @@ public class ItemService {
 		return item.getId();
 	}
 	
+	
+	//상품 삭제
+//	public void deleteItem(ItemFormDto itemFormDto, ItemImgDto itemImgDto) {
+//		itemRepository.deleteAllById(itemFormDto);
+//		itemRepository.deleteAllById(itemImgDto);
+//	}
+	
 	//ItemRepositoryCustom, ItemRepositoryCustomImpl에서 작성한 쿼리문 출력하기
 	public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
 		return itemRepository.getAdminItemPage(itemSearchDto, pageable);

@@ -11,7 +11,7 @@ import project1.spring.item.constant.ItemSellStatus;
 public class ItemSearchDto {
 
 	//검색한 날짜 형태
-	private String searchDateType;
+//	private String searchDateType;
 	
 	//상품 판매 상태
 	private ItemSellStatus searchSellStatus;

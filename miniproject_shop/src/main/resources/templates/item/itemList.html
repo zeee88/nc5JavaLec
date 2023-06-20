@@ -3,6 +3,15 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorate="~{layouts/layout1}">
 <script src="http://code.jquery.com/jquery-latest"></script>
+<th:block layout:fragment="css">
+  <style>
+    .low-stock {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</th:block>
+  
 <!-- 사용자 스크립트 추가 -->
 <th:block layout:fragment="script">
     <script th:inline="javascript">
@@ -13,19 +22,25 @@
                 page(0);
             });
         });
-
+        
         function page(page){
-            var searchDateType = $("#searchDateType").val();
             var searchSellStatus = $("#searchSellStatus").val();
             var searchBy = $("#searchBy").val();
             var searchQuery = $("#searchQuery").val();
 
-            location.href="/admin/items/" + page + "?searchDateType=" + searchDateType
-            + "&searchSellStatus=" + searchSellStatus
+            location.href="/admin/items/" + page 
+            + "?searchSellStatus=" + searchSellStatus
             + "&searchBy=" + searchBy
             + "&searchQuery=" + searchQuery;
         }
 
+        
+        $(document).ready(function(){
+        	$('#newproductBtn').on("click", function(e) {
+        		e.preventDefault();
+        		location.href = "/admin/item/new";
+        	});
+        });
     </script>
 </th:block>
 
@@ -33,37 +48,49 @@
 <div layout:fragment="content">
 	<form th:action="@{'/admin/items/' + ${items.number}}" role="form"
 		method="get" th:object="${items}">
+ 
+ <button id="newproductBtn" type="submit" class="btn btn-primary">
+새 상품 등록
+ </button>
 
 		<table class="table">
 			<thead>
 				<tr>
-					<td>상품아이디</td>
+					<td>상품번호</td>
 					<td>상품명</td>
-					<td>상태</td>
-					<td>등록자</td>
-					<td>등록일</td>
+					<td>제품상태</td>
+					<td>재고수량</td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="item, status: ${items.getContent()}">
+				<tr th:each="item, status: ${items.getContent()}"
+                    th:classappend="${item.stockNumber <= 30} ? 'low-stock' : ''">
 					<td th:text="${item.id}"></td>
 					<td><a th:href="'/admin/item/'+${item.id}"
 						th:text="${item.itemNm}"></a></td>
 					<td
 						th:text="${item.itemSellStatus == 0} ? '품절' : '판매중'"></td>
-					<td th:text="${item.createdBy}"></td>
-					<td th:text="${item.regTime}"></td>
+					<td th:text="${item.stockNumber}"></td>
 				</tr>
 			</tbody>
 		</table>
+		
+		
 		<!-- 페이지 기능 구현(이전 페이지, 페이지 번호, 다음 페이지) -->
 		<div th:with="start=${(items.number/maxPage)*maxPage + 1}, end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
             <ul class="pagination justify-content-center">
 
-					<!-- 첫 번째 페이지이면 이전버튼 사용못하게 설정(disabled) -->
+				<!-- 맨 앞페이지로 가는 버튼 -->
+				<li class="page-item" th:classappend="${items.first}?'disabled'">
+					<a th:onclick="'javascript:page(0)'" aria-label="First"class="page-link">
+						<span aria-hidden="true">첫 페이지</span>
+					</a>
+				</li>
+
+				<!-- 첫 번째 페이지이면 이전버튼 사용못하게 설정(disabled) -->
                 <li class="page-item" th:classappend="${items.first}?'disabled'">
                     <a th:onclick="'javascript:page(' + ${items.number - 1} + ')'" aria-label='Previous' class="page-link">
-                        <span aria-hidden='true'>Previous</span>
+                        <span aria-hidden='true'>이전</span>
                     </a>
                 </li>
 
@@ -74,22 +101,32 @@
 					<!-- 마지막 페이지이면 다음버튼 사용못하게 설정(disabled) -->
                 <li class="page-item" th:classappend="${items.last}?'disabled'">
                     <a th:onclick="'javascript:page(' + ${items.number + 1} + ')'" aria-label='Next' class="page-link">
-                        <span aria-hidden='true'>Next</span>
+                        <span aria-hidden='true'>다음</span>
                     </a>
                 </li>
+                <!-- 맨 뒷 페이지로 가는 버튼 -->
+				<li class="page-item" th:classappend="${items.last}?'disabled'">
+					<a th:onclick="'javascript:page(' + ${items.totalPages - 1} + ')'" aria-label='Last' class="page-link">
+					
+						<span aria-hidden="true">마지막 페이지</span>
+					</a>
+				</li>	
+				
+			
 
-            </ul>
+
+			</ul>
         </div>
 		
-		<!-- 기간 검색 기능 구현 -->
-		<div class="form-inline justify-content-center" th:object="${itemSearchDto}">
-            <select th:field="*{searchDateType}" class="form-control" style="width:auto;">
+		<!-- 검색 기능 구현 -->
+		    <div class="form-inline justify-content-center" th:object="${itemSearchDto}">
+          <!--  <select th:field="*{searchDateType}" class="form-control" style="width:auto;">
                 <option value="all">전체기간</option>
                 <option value="1d">1일</option>
                 <option value="1w">1주</option>
                 <option value="1m">1개월</option>
                 <option value="6m">6개월</option>
-            </select>
+            </select>  -->
             <select th:field="*{searchSellStatus}" class="form-control" style="width:auto;">
                 <option value="">판매상태(전체)</option>
                 <option value="SELL">판매</option>

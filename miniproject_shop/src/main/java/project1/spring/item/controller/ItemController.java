@@ -122,12 +122,13 @@ public class ItemController {
 			//페이지 정보를 들고 올 수도 있고 페이지 정보가 없을 수도 있다.
 			@PathVariable("page") Optional<Integer> page) {
 		//시작페이지는 페이지가 있으면 get()한 페이지 들고 오고 아니면 0으로 하겠다. 한 페이지에 상품은 3개씩 
-		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 3);
+		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 5);
 		Page<Item> items = itemService.getAdminItemPage(itemSearchDto, pageable);
 		
 		model.addAttribute("items", items);
 		model.addAttribute("itemSearchDto", itemSearchDto);
 		model.addAttribute("maxPage", 5);
+		model.addAttribute("totalPages", items.getTotalPages());
 		
 		return "item/itemList";
 	}

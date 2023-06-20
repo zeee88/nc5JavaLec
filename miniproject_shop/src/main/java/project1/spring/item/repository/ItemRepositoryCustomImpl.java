@@ -46,18 +46,17 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
 				// where절에서 , 로 이어진 부분은 and의 의미.
 				// 조건을 여러개를 걸 수 있다. 그러나 모든 조건을 써야하는 것은 아니고 null값으로 생략도 가능하다.
 				// 즉, 갖고 있는 값에 따라 조건을 다양하게 걸 수 있다. (동적 쿼리. 쿼리dsl)
-				.where(regDtsAfter(itemSearchDto.getSearchDateType()),
-						searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
+				.where(searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
 						searchByLike(itemSearchDto.getSearchBy(), itemSearchDto.getSearchQuery()))
-				.orderBy(item.id.desc()).offset(pageable.getOffset()) // 페이지 시작할 위치.
+				.orderBy(item.stockNumber.asc())
+				.offset(pageable.getOffset()) // 페이지 시작할 위치.
 				.limit(pageable.getPageSize()) // 페이지 몇 개.
 				.fetch();
 
 		// Wildcard.count는 count(*)와 동일. 갯수 세는 집합함수
 		// where절의 조건을 부합하는 데이터의 전체 갯수를 센다.
 		long total = queryFactory.select(Wildcard.count).from(item)
-				.where(regDtsAfter(itemSearchDto.getSearchDateType()),
-						searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
+				.where(searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
 						searchByLike(itemSearchDto.getSearchBy(), itemSearchDto.getSearchQuery()))
 				.fetchOne();
 
@@ -75,28 +74,28 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
 
 	
 	
-	private BooleanExpression regDtsAfter(String searchDateType) {
-
-		LocalDateTime dateTime = LocalDateTime.now();
-
-		if (StringUtils.equals("all", searchDateType) || searchDateType == null) {
-			return null;
-		} else if (StringUtils.equals("1d", searchDateType)) {
-			// 하루 전부터 지금까지의 데이터 검색
-			dateTime = dateTime.minusDays(1);
-		} else if (StringUtils.equals("1w", searchDateType)) {
-			// 일주 전부터 지금까지의 데이터 검색
-			dateTime = dateTime.minusWeeks(1);
-		} else if (StringUtils.equals("1m", searchDateType)) {
-			// 한 달 전부터 지금까지의 데이터 검색
-			dateTime = dateTime.minusMonths(1);
-		} else if (StringUtils.equals("6m", searchDateType)) {
-			// 6개월 전부터 지금까지의 데이터 검색
-			dateTime = dateTime.minusMonths(6);
-		}
-		// item의 등록시간을 리턴
-		return item.regTime.after(dateTime);
-	}
+//	private BooleanExpression regDtsAfter(String searchDateType) {
+//
+//		LocalDateTime dateTime = LocalDateTime.now();
+//
+//		if (StringUtils.equals("all", searchDateType) || searchDateType == null) {
+//			return null;
+//		} else if (StringUtils.equals("1d", searchDateType)) {
+//			// 하루 전부터 지금까지의 데이터 검색
+//			dateTime = dateTime.minusDays(1);
+//		} else if (StringUtils.equals("1w", searchDateType)) {
+//			// 일주 전부터 지금까지의 데이터 검색
+//			dateTime = dateTime.minusWeeks(1);
+//		} else if (StringUtils.equals("1m", searchDateType)) {
+//			// 한 달 전부터 지금까지의 데이터 검색
+//			dateTime = dateTime.minusMonths(1);
+//		} else if (StringUtils.equals("6m", searchDateType)) {
+//			// 6개월 전부터 지금까지의 데이터 검색
+//			dateTime = dateTime.minusMonths(6);
+//		}
+//		// item의 등록시간을 리턴
+//		return item.regTime.after(dateTime);
+//	}
 
 	
 	

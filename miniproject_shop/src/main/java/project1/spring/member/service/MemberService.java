@@ -4,6 +4,8 @@ import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import project1.spring.member.dto.MemberDto;
 import project1.spring.member.entity.Member;
 import project1.spring.member.repository.MemberRepository;
 
@@ -63,6 +66,11 @@ public class MemberService implements UserDetailsService{
 				.password(member.getPassword())
 				.roles(member.getRole().toString())
 				.build();
+	}
+	
+	//memberRepositoryCustom, memberRepositoryCustomImpl에서 작성한 쿼리문 출력하기
+	public Page<Member> getAdminMemberPage(MemberDto memberDto, Pageable pageable){
+		return memberRepository.getAdminMemberPage(memberDto, pageable);
 	}
 
 }

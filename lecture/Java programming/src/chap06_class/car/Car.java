@@ -6,7 +6,7 @@ public class Car {
 	public String company;
 	public String model;
 	public String color;
-	public String[] option;
+	public String[] optionf;
 	public int price;
 	
 	//기본 생성자

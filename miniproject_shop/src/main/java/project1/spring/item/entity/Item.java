@@ -19,6 +19,7 @@ import lombok.Setter;
 import lombok.ToString;
 import project1.spring.item.constant.ItemSellStatus;
 import project1.spring.item.dto.ItemFormDto;
+import project1.spring.item.repository.ItemRepository;
 import project1.spring.utils.entity.BaseEntity;
 
 @Entity
@@ -64,4 +65,7 @@ public class Item extends BaseEntity{
 		this.itemSellStatus = itemFormDto.getItemSellStatus();
 		
 	}
+	
+	
+	
 }
